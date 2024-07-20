@@ -1,0 +1,15 @@
+{"PEF05":"Peso por edad en niñas desde el nacimiento a 5 años",
+    "PEM05": "Peso por edad en niños desde el nacimiento a 5 años",
+    "TEF05": "Longitud/estatura por edad en niñas desde el nacimientos a 5 años",
+    "TEM05": "Longitud/estatura por edad en niños desde el nacimientos a 5 años",
+    "PTF02": "Peso por longitud en niñas desde el nacimiento a 2 años, de 45 cm a 110 cm",
+    "PTM02": "Peso por longitud en niños desde el nacimiento a 2 años, de 45 cm a 110 cm",
+    "PTF25": "Peso por estatura en niñas de 2 años a 5 años, de 65 cm a 120 cm",
+    "PTM25": "Peso por estatura en niños de 2 años a 5 años, de 65 cm a 120 cm",
+    "PEF510": "Peso por edad en niñas de 5 años 1 mes a 10 años",
+    "PEM510": "Peso por edad en niñas de 5 años 1 mes a 10 años",
+    "TEF519": "Estatura por edad en niñas de 5 años 1 mes a 19 años",
+    "TEM519": "Estatura por edad en niños de 5 años 1 mes a 19 años",
+    "IMCF519": "IMC por edad en niñas y adolescentes de 5 años 1 mes a 19 años",
+    "IMCM519": "IMC por edad en niños y adolescentes de 5 años 1 mes a 19 años"
+}
