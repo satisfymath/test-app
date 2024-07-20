@@ -7,29 +7,19 @@ body {
   position: relative; /* Necesario para posicionar el pseudo-elemento */
 }
 
+/* Estilos para tablas */
 table {
   border-collapse: collapse;
   width: 80%; /* Reduce el ancho de la tabla */
   margin: 20px auto; /* Centra la tabla */
-  box-shadow: 0 2px 3px rgb(228, 99, 0);
-  background-color: rgba(255, 255, 255, 0.974); /* Fondo de color gris con opacidad */
+  box-shadow: 0 2px 3px rgba(228, 99, 0, 0.8); /* Sombra de la tabla */
+  background-color: rgba(255, 255, 255, 0.974); /* Fondo de color blanco con opacidad */
   color: #000000; /* Texto de color negro */
   border-radius: 8px; /* Esquinas redondeadas */
   overflow: hidden; /* Asegura que las esquinas del contenido también sean redondeadas */
-  filter: none;
 }
 
-th, td {
-  border: 2px solid #ff9800; /* Bordes naranjas por defecto */
-  padding: 12px; /* Aumenté el padding para más espacio */
-  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
-}
-
-th {
-  background-color: rgba(233, 109, 0, 0.8); /* Fondo más oscuro para los encabezados con opacidad por defecto */
-  font-weight: bold; /* Hace el texto del encabezado más destacado */
-}
-/* Estilos generales para tablas */
+/* Estilos generales para celdas de la tabla */
 th, td {
   border: 2px solid #ff9800; /* Bordes naranjas por defecto */
   padding: 12px; /* Espacio adicional en las celdas */
