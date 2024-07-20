@@ -15,9 +15,9 @@ const Tablas = () => {
 
   return (
     <div>
-      <h2>Tables</h2>
+      <h2>Tablas</h2>
       {loading ? (
-        <p>Loading data...</p>
+        <p>Loading Data ...</p>
       ) : Object.keys(data).length > 0 ? (
         Object.keys(data).map(key => (
           <Table key={key} title={key} data={data[key]} />

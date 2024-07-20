@@ -6,24 +6,26 @@ import Tablas from './Tablas';
 import Libros from './Libros';
 import Contacto from './Contacto';
 import './App.css';
+import barIcon from './baricon.png';
 
 const App = () => {
   return (
     <Router>
       <AppBar position="fixed" className="navbar">
         <Toolbar className="toolbar">
-          <Typography variant="h6">
+          <img src={barIcon} alt="Icono" className="app-icon" />
+          <Typography variant="h6" className="app-title">
             NutriTrust
           </Typography>
-          <div>
+          <div className="nav-buttons">
             <Button color="inherit" component={Link} to="/">Home</Button>
-            <Button color="inherit" component={Link} to="/tablas">Tables</Button>
-            <Button color="inherit" component={Link} to="/libros">Books</Button>
-            <Button color="inherit" component={Link} to="/contacto">Contact</Button>
+            <Button color="inherit" component={Link} to="/tablas">Tablas</Button>
+            <Button color="inherit" component={Link} to="/libros">Libros</Button>
+            <Button color="inherit" component={Link} to="/contacto">Contacto</Button>
           </div>
         </Toolbar>
       </AppBar>
-      <Toolbar />  {/* Add a Toolbar to offset the fixed AppBar */}
+      <Toolbar /> {/* Add a Toolbar to offset the fixed AppBar */}
       <Container>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -37,7 +39,6 @@ const App = () => {
 };
 
 export default App;
-
 
 
 

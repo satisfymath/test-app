@@ -1,6 +1,6 @@
 /* Estilos para el fondo de la aplicación */
 body {
-  background: url('./background.webp') no-repeat center center fixed;
+  background: url('./background2.webp') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   padding: 20px;
@@ -76,7 +76,7 @@ tbody tr:hover {
 
 /* Estilos para botones */
 button {
-  background-color: #4A90E2;
+  background-color: #dfb543dd;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -85,22 +85,12 @@ button {
 }
 
 button:hover {
-  background-color: #357ABD;
-}
-
-/* Estilos para la barra de navegación */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  background-color: #bd6035fc;
 }
 
 .navbar .toolbar {
+  background-color: #22ff8db1; 
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -112,4 +102,43 @@ button:hover {
 
 .navbar a:hover {
   color: #ff7300;
+}
+.navbar .toolbar {
+  background-color: #22ff8db1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Añade un poco de espacio alrededor */
+}
+
+.navbar .toolbar .app-name {
+  font-size: 1.5rem; /* Ajusta el tamaño de la fuente según tus necesidades */
+}
+
+.navbar .toolbar .app-icon {
+  width: 40px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 40px; /* Mantén la proporción si es necesario */
+}
+.navbar {
+  background-color: #333; /* Ajusta el color de fondo según tus preferencias */
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Esto espacia el logo, el título y los botones */
+}
+
+.app-icon {
+  height: 40px; /* Ajusta el tamaño según tus necesidades */
+  margin-right: 10px;
+}
+
+.app-title {
+  flex-grow: 1; /* Esto hace que el título ocupe el espacio restante disponible */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px; /* Espaciado entre los botones */
 }

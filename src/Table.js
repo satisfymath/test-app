@@ -40,12 +40,12 @@ const Table = ({ title, data }) => {
 
   // Obtén la descripción del título usando el archivo JSON
   const tableTitle = names[title] || 'Título no disponible';
-  console.log('Table Title:', tableTitle);
+  //console.log('Table Title:', tableTitle);
 
   // Determina la clase para el título y la tabla
   const titleClass = tableTitle.toLowerCase().includes('niñas') ? 'ninas' :
                      tableTitle.toLowerCase().includes('niños') ? 'ninos' : '';
-  console.log('Title Class:', titleClass);
+  //console.log('Title Class:', titleClass);
 
   return (
     <div>
