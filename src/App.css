@@ -1,77 +1,115 @@
-/* App.css */
-/* Crea un contenedor para aplicar el desenfoque y el color de fondo */
+/* Estilos para el fondo de la aplicación */
 body {
-  /* Fondo de imagen y color estático */
   background: url('./background.webp') no-repeat center center fixed;
-  background-size: cover; /* Asegúrate de que la imagen cubra todo el fondo */
-  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  background-size: cover;
+  position: relative;
+  padding: 20px;
 }
 
 /* Estilos para tablas */
 table {
   border-collapse: collapse;
-  width: 80%; /* Reduce el ancho de la tabla */
-  margin: 20px auto; /* Centra la tabla */
-  box-shadow: 0 2px 3px rgba(228, 99, 0, 0.8); /* Sombra de la tabla */
-  background-color: rgba(255, 255, 255, 0.974); /* Fondo de color blanco con opacidad */
-  color: #000000; /* Texto de color negro */
-  border-radius: 8px; /* Esquinas redondeadas */
-  overflow: hidden; /* Asegura que las esquinas del contenido también sean redondeadas */
+  width: 100%;
+  max-width: 90%;
+  margin: 20px auto;
+  box-shadow: 0 2px 3px rgba(228, 99, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.974);
+  color: #000000;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* Estilos generales para celdas de la tabla */
 th, td {
-  border: 2px solid #ff9800; /* Bordes naranjas por defecto */
-  padding: 12px; /* Espacio adicional en las celdas */
-  text-align: left; /* Alinea el texto a la izquierda */
+  border: 2px solid #ff9800;
+  padding: 12px;
+  text-align: left;
 }
 
 /* Estilos para encabezados de tabla */
 th {
-  background-color: rgba(233, 109, 0, 0.8); /* Fondo más oscuro para encabezados por defecto */
-  font-weight: bold; /* Destaca el texto del encabezado */
+  background-color: rgba(233, 109, 0, 0.8);
+  font-weight: bold;
 }
 
-/* Estilos para el título h2 por defecto */
+/* Estilos para el título h2 */
 h2 {
-  text-align: center; /* Centra el título */
-  margin-top: 40px; /* Espacio encima del título */
-  margin-bottom: 20px; /* Espacio debajo del título */
-  font-size: 2em; /* Tamaño de la fuente del título */
-  color: #ff7300; /* Color del título por defecto */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6); /* Sombra del texto para mejorar la legibilidad */
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ff7300;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-/* Estilos para el título h2 con la clase "ninas" */
+/* Estilos específicos para "niñas" */
 h2.ninas {
-  color: #ff7300; /* Color naranjo */
+  color: #ff7300;
 }
 
-/* Estilos para el título h2 con la clase "ninos" */
-h2.ninos {
-  color: #4caf50; /* Color verde para los títulos con "niños" */
-}
-
-/* Estilos para tablas con la clase "ninas" */
 table.ninas th, table.ninas td {
-  border: 2px solid #ff7300; /* Bordes naranjas para tablas de "niñas" */
+  border: 2px solid #ff7300;
 }
 
 table.ninas th {
-  background-color: rgba(233, 109, 0, 0.8); /* Fondo más oscuro para encabezados de "niñas" */
+  background-color: rgba(233, 109, 0, 0.8);
 }
 
-/* Estilos para tablas con la clase "ninos" */
+/* Estilos específicos para "niños" */
+h2.ninos {
+  color: #4caf50;
+}
+
 table.ninos th, table.ninos td {
-  border: 2px solid #4caf50; /* Bordes verdes para tablas de "niños" */
+  border: 2px solid #4caf50;
 }
 
 table.ninos th {
-  background-color: rgba(76, 175, 80, 0.8); /* Fondo verde para encabezados de "niños" */
+  background-color: rgba(76, 175, 80, 0.8);
 }
 
 /* Estilos para filas de tabla al pasar el ratón */
 tbody tr:hover {
-  background-color: rgba(43, 225, 61, 0.221); /* Fondo más claro al pasar el ratón con opacidad */
-  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  background-color: rgba(43, 225, 61, 0.221);
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para botones */
+button {
+  background-color: #4A90E2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  color: #ff7300;
 }

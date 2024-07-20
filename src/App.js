@@ -1,28 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import Table from './Table';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
+import Home from './Home';
+import Tablas from './Tablas';
+import Libros from './Libros';
+import Contacto from './Contacto';
 import './App.css';
-import jsonData from './tables.json';  // Ajusta la ruta según la ubicación del archivo
 
 const App = () => {
-  const [data, setData] = useState({});
-
-  useEffect(() => {
-    // Aquí podrías hacer algún procesamiento adicional si es necesario
-    setData(jsonData);
-  }, []);
-
   return (
-    <div id="tables-container">
-      {Object.keys(data).length > 0 ? (
-        Object.keys(data).map(key => (
-          <Table key={key} title={key} data={data[key]} />
-        ))
-      ) : (
-        <p>No data available</p>
-      )}
-    </div>
+    <Router>
+      <AppBar position="fixed" className="navbar">
+        <Toolbar className="toolbar">
+          <Typography variant="h6">
+            NutriTrust
+          </Typography>
+          <div>
+            <Button color="inherit" component={Link} to="/">Home</Button>
+            <Button color="inherit" component={Link} to="/tablas">Tables</Button>
+            <Button color="inherit" component={Link} to="/libros">Books</Button>
+            <Button color="inherit" component={Link} to="/contacto">Contact</Button>
+          </div>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />  {/* Add a Toolbar to offset the fixed AppBar */}
+      <Container>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/tablas" component={Tablas} />
+          <Route path="/libros" component={Libros} />
+          <Route path="/contacto" component={Contacto} />
+        </Switch>
+      </Container>
+    </Router>
   );
 };
 
 export default App;
+
+
+
 
