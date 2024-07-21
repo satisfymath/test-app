@@ -108,15 +108,15 @@ button:hover {
 
 .app-icon {
   margin-right: 10px;
-  width: 40px; /* Ajusta el tamaño de la imagen según tus necesidades */
-  height: 40px; /* Mantén la proporción si es necesario */
+  width: 60px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 60px; /* Mantén la proporción si es necesario */
 }
 
 .app-title {
   flex-grow: 1; /* Esto hace que el título ocupe el espacio restante disponible */
+  font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
 }
 
 .nav-buttons {
   display: flex;
-  gap: 1px; /* Espaciado entre los botones */
 }

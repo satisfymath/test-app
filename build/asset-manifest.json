@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/test-app/build/static/css/main.fd57ca99.css",
-    "main.js": "/test-app/build/static/js/main.5a053477.js",
+    "main.css": "/test-app/build/static/css/main.3cfa975d.css",
+    "main.js": "/test-app/build/static/js/main.11842dec.js",
     "static/js/453.a5979135.chunk.js": "/test-app/build/static/js/453.a5979135.chunk.js",
-    "static/media/baricon.png": "/test-app/build/static/media/baricon.d623d56560ecc608668f.png",
+    "static/media/baricon.png": "/test-app/build/static/media/baricon.871662a52e0cd4be018b.png",
     "index.html": "/test-app/build/index.html",
-    "main.fd57ca99.css.map": "/test-app/build/static/css/main.fd57ca99.css.map",
-    "main.5a053477.js.map": "/test-app/build/static/js/main.5a053477.js.map",
+    "main.3cfa975d.css.map": "/test-app/build/static/css/main.3cfa975d.css.map",
+    "main.11842dec.js.map": "/test-app/build/static/js/main.11842dec.js.map",
     "453.a5979135.chunk.js.map": "/test-app/build/static/js/453.a5979135.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd57ca99.css",
-    "static/js/main.5a053477.js"
+    "static/css/main.3cfa975d.css",
+    "static/js/main.11842dec.js"
   ]
 }
