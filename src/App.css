@@ -1,9 +1,9 @@
 /* Estilos para el fondo de la aplicación */
 body {
-  background: url('./background2.webp') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   padding: 20px;
+  background-color: rgba(248, 221, 255, 0.904);
 }
 
 /* Estilos para tablas */
@@ -88,50 +88,28 @@ button:hover {
   background-color: #bd6035fc;
 }
 
-.navbar .toolbar {
-  background-color: #22ff8db1; 
-  display: flex;
-  align-items: center;
-}
-
 .navbar a {
-  color: #000;
+  color: #fcfcfc;
   text-decoration: none;
   margin: 0 10px;
 }
 
 .navbar a:hover {
-  color: #ff7300;
+  color: #d900ff;
 }
+
 .navbar .toolbar {
-  background-color: #22ff8db1;
+  background-color: #d6aaffc5;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px; /* Añade un poco de espacio alrededor */
 }
 
-.navbar .toolbar .app-name {
-  font-size: 1.5rem; /* Ajusta el tamaño de la fuente según tus necesidades */
-}
-
-.navbar .toolbar .app-icon {
+.app-icon {
+  margin-right: 10px;
   width: 40px; /* Ajusta el tamaño de la imagen según tus necesidades */
   height: 40px; /* Mantén la proporción si es necesario */
-}
-.navbar {
-  background-color: #333; /* Ajusta el color de fondo según tus preferencias */
-}
-
-.toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Esto espacia el logo, el título y los botones */
-}
-
-.app-icon {
-  height: 40px; /* Ajusta el tamaño según tus necesidades */
-  margin-right: 10px;
 }
 
 .app-title {
@@ -140,5 +118,5 @@ button:hover {
 
 .nav-buttons {
   display: flex;
-  gap: 10px; /* Espaciado entre los botones */
+  gap: 1px; /* Espaciado entre los botones */
 }

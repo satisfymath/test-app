@@ -15,7 +15,7 @@ const App = () => {
         <Toolbar className="toolbar">
           <img src={barIcon} alt="Icono" className="app-icon" />
           <Typography variant="h6" className="app-title">
-            NutriTrust
+            Estudiemos Nutrición
           </Typography>
           <div className="nav-buttons">
             <Button color="inherit" component={Link} to="/">Home</Button>
