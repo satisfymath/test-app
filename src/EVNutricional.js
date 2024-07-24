@@ -125,10 +125,6 @@ const EVNutricional = () => {
     return clavesTablas;
   };
 
-  const obtenerDescripcionesTablas = (clavesTablas) => {
-    return clavesTablas.map(clave => `${tablaDescripciones[clave]}: ${EvaluacionNutricional(clave)}` || 'Descripción no disponible');
-  };
-
   const EvaluacionNutricional = (key) => {
     const edadEnMeses = calcularEdadEnMeses();
     const pesoNum = parseFloat(peso);
@@ -151,6 +147,13 @@ const EVNutricional = () => {
     return '';
   };
 
+  const obtenerDescripcionesTablas = (clavesTablas) => {
+    return clavesTablas.map(clave => ({
+      clave: clave,
+      descripcion: `${tablaDescripciones[clave]}: ${EvaluacionNutricional(clave)}` || 'Descripción no disponible'
+    }));
+  };
+
   const calcularIMC = () => {
     if (peso && talla) {
       const tallaEnMetros = talla / 100;
@@ -159,6 +162,78 @@ const EVNutricional = () => {
     return null;
   };
 
+  const calcularCalificacionNutricional = (evaluacionesTablas) => {
+    let calificacion = "No clasificado";
+  
+    const esMenorDeUnAño = evaluacionesTablas.some(evaluacion => 
+      evaluacion.clave.includes("PEF05") || evaluacion.clave.includes("PEM05")
+    );
+    const esEntreUnoYCincoAños = evaluacionesTablas.some(evaluacion => 
+      evaluacion.clave.includes("PTF02") || evaluacion.clave.includes("PTM02") ||
+      evaluacion.clave.includes("PTF25") || evaluacion.clave.includes("PTM25")
+    );
+    const esMayorDeCincoAños = evaluacionesTablas.some(evaluacion => 
+      evaluacion.clave.includes("PEF510") || evaluacion.clave.includes("PEM510") ||
+      evaluacion.clave.includes("IMCF519") || evaluacion.clave.includes("IMCM519")
+    );
+  
+    const contiene = (clave, rango) => evaluacionesTablas.some(evaluacion => 
+      evaluacion.clave.includes(clave) && evaluacion.descripcion.includes(rango)
+    );
+  
+    if (esMenorDeUnAño) {
+      if (contiene("PEF05", "≤ -2DE") || contiene("PEM05", "≤ -2DE")) {
+        calificacion = "Desnutrición";
+      } else if ((contiene("PEF05", "≤ -1DE") && contiene("PEF05", "> -2DE")) || 
+                 (contiene("PEM05", "≤ -1DE") && contiene("PEM05", "> -2DE"))) {
+        calificacion = "Riesgo de desnutrición";
+      } else if ((contiene("PEF05", "≥ +1DE") && contiene("PEF05", "< +2DE")) || 
+                 (contiene("PEM05", "≥ +1DE") && contiene("PEM05", "< +2DE"))) {
+        calificacion = "Riesgo de sobrepeso";
+      } else if (contiene("PEF05", "≥ +2DE") || contiene("PEM05", "≥ +2DE")) {
+        calificacion = "Sobrepeso";
+      }
+    } else if (esEntreUnoYCincoAños) {
+      if (contiene("PTF02", "≤ -2DE") || contiene("PTM02", "≤ -2DE") || 
+          contiene("PTF25", "≤ -2DE") || contiene("PTM25", "≤ -2DE")) {
+        calificacion = "Desnutrición";
+      } else if ((contiene("PTF02", "≤ -1DE") && contiene("PTF02", "> -2DE")) || 
+                 (contiene("PTM02", "≤ -1DE") && contiene("PTM02", "> -2DE")) || 
+                 (contiene("PTF25", "≤ -1DE") && contiene("PTF25", "> -2DE")) || 
+                 (contiene("PTM25", "≤ -1DE") && contiene("PTM25", "> -2DE"))) {
+        calificacion = "Riesgo de desnutrición";
+      } else if ((contiene("PTF02", "≥ +1DE") && contiene("PTF02", "< +2DE")) || 
+                 (contiene("PTM02", "≥ +1DE") && contiene("PTM02", "< +2DE")) || 
+                 (contiene("PTF25", "≥ +1DE") && contiene("PTF25", "< +2DE")) || 
+                 (contiene("PTM25", "≥ +1DE") && contiene("PTM25", "< +2DE"))) {
+        calificacion = "Riesgo de sobrepeso";
+      } else if (contiene("PTF02", "≥ +2DE") || contiene("PTM02", "≥ +2DE") || 
+                 contiene("PTF25", "≥ +2DE") || contiene("PTM25", "≥ +2DE")) {
+        calificacion = "Sobrepeso";
+      }
+    } else if (esMayorDeCincoAños) {
+      if (contiene("PEF510", "≤ -2DE") || contiene("PEM510", "≤ -2DE") || 
+          contiene("IMCF519", "≤ -2DE") || contiene("IMCM519", "≤ -2DE")) {
+        calificacion = "Desnutrición";
+      } else if ((contiene("PEF510", "≤ -1DE") && contiene("PEF510", "> -2DE")) || 
+                 (contiene("PEM510", "≤ -1DE") && contiene("PEM510", "> -2DE")) || 
+                 (contiene("IMCF519", "≤ -1DE") && contiene("IMCF519", "> -2DE")) || 
+                 (contiene("IMCM519", "≤ -1DE") && contiene("IMCM519", "> -2DE"))) {
+        calificacion = "Riesgo de desnutrición";
+      } else if ((contiene("PEF510", "≥ +1DE") && contiene("PEF510", "< +2DE")) || 
+                 (contiene("PEM510", "≥ +1DE") && contiene("PEM510", "< +2DE")) || 
+                 (contiene("IMCF519", "≥ +1DE") && contiene("IMCF519", "< +2DE")) || 
+                 (contiene("IMCM519", "≥ +1DE") && contiene("IMCM519", "< +2DE"))) {
+        calificacion = "Riesgo de sobrepeso";
+      } else if (contiene("PEF510", "≥ +2DE") || contiene("PEM510", "≥ +2DE") || 
+                 contiene("IMCF519", "≥ +2DE") || contiene("IMCM519", "≥ +2DE")) {
+        calificacion = "Sobrepeso";
+      }
+    }
+  
+    return calificacion;
+  };
+  
   const imc = calcularIMC();
   const clavesTablas = obtenerClavesTablas();
   const descripcionesTablas = obtenerDescripcionesTablas(clavesTablas);
@@ -219,9 +294,10 @@ const EVNutricional = () => {
               <h3>Descripciones de Tablas</h3>
               <ul>
                 {descripcionesTablas.map((descripcion, index) => (
-                  <li key={index}>{descripcion}</li>
+                  <li key={index}>{descripcion.descripcion}</li>
                 ))}
               </ul>
+              <h3>Calificación Nutricional: {calcularCalificacionNutricional(descripcionesTablas)}</h3>
             </div>
           ) : (
             <p>No hay descripciones disponibles para mostrar.</p>
