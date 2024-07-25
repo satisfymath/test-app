@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { FormularioContext } from './FormularioContext';
 import tables from './tables.json';
 
 const tablaDescripciones = {
@@ -50,7 +51,7 @@ const calcularEdadCronologica = (fechaNacimiento) => {
 
   let edadAños = años;
   let edadMeses = meses;
-  let edadDias = dias;
+  let edadDias = dias - 1;
 
   if (edadDias < 0) {
     edadMeses--;
@@ -66,11 +67,19 @@ const calcularEdadCronologica = (fechaNacimiento) => {
 };
 
 const EVNutricional = () => {
-  const [nombre, setNombre] = useState('');
-  const [fechaNacimiento, setFechaNacimiento] = useState('');
-  const [sexo, setSexo] = useState('');
-  const [peso, setPeso] = useState('');
-  const [talla, setTalla] = useState('');
+  const {
+    nombre,
+    setNombre,
+    fechaNacimiento,
+    setFechaNacimiento,
+    sexo,
+    setSexo,
+    peso,
+    setPeso,
+    talla,
+    setTalla,
+    handleClear
+  } = useContext(FormularioContext);
 
   const calcularEdadEnMeses = () => {
     if (fechaNacimiento) {
@@ -164,75 +173,72 @@ const EVNutricional = () => {
 
   const calcularCalificacionNutricional = (evaluacionesTablas) => {
     let calificacion = "No clasificado";
-  
-    const esMenorDeUnAño = evaluacionesTablas.some(evaluacion => 
-      evaluacion.clave.includes("PEF05") || evaluacion.clave.includes("PEM05")
-    );
-    const esEntreUnoYCincoAños = evaluacionesTablas.some(evaluacion => 
-      evaluacion.clave.includes("PTF02") || evaluacion.clave.includes("PTM02") ||
-      evaluacion.clave.includes("PTF25") || evaluacion.clave.includes("PTM25")
-    );
-    const esMayorDeCincoAños = evaluacionesTablas.some(evaluacion => 
-      evaluacion.clave.includes("PEF510") || evaluacion.clave.includes("PEM510") ||
-      evaluacion.clave.includes("IMCF519") || evaluacion.clave.includes("IMCM519")
-    );
+    const edadEnMeses = calcularEdadEnMeses();
   
     const contiene = (clave, rango) => evaluacionesTablas.some(evaluacion => 
       evaluacion.clave.includes(clave) && evaluacion.descripcion.includes(rango)
     );
   
-    if (esMenorDeUnAño) {
-      if (contiene("PEF05", "≤ -2DE") || contiene("PEM05", "≤ -2DE")) {
+    if (edadEnMeses < 12) {
+      if (contiene("PE", "-2DE")) {
         calificacion = "Desnutrición";
-      } else if ((contiene("PEF05", "≤ -1DE") && contiene("PEF05", "> -2DE")) || 
-                 (contiene("PEM05", "≤ -1DE") && contiene("PEM05", "> -2DE"))) {
+      } else if (contiene("PE", "-1DE")) {
         calificacion = "Riesgo de desnutrición";
-      } else if ((contiene("PEF05", "≥ +1DE") && contiene("PEF05", "< +2DE")) || 
-                 (contiene("PEM05", "≥ +1DE") && contiene("PEM05", "< +2DE"))) {
-        calificacion = "Riesgo de sobrepeso";
-      } else if (contiene("PEF05", "≥ +2DE") || contiene("PEM05", "≥ +2DE")) {
+      } else if (contiene("PE", "Normal")) {
+        calificacion = "Normal o Eutrófico";
+      } else if (contiene("PT", "+1DE")) {
         calificacion = "Sobrepeso";
+      } else if (contiene("PT", "+2DE")) {
+        calificacion = "Obesidad";
       }
-    } else if (esEntreUnoYCincoAños) {
-      if (contiene("PTF02", "≤ -2DE") || contiene("PTM02", "≤ -2DE") || 
-          contiene("PTF25", "≤ -2DE") || contiene("PTM25", "≤ -2DE")) {
+    } else if (edadEnMeses < 61) {
+      if (contiene("PT", "-2DE")) {
         calificacion = "Desnutrición";
-      } else if ((contiene("PTF02", "≤ -1DE") && contiene("PTF02", "> -2DE")) || 
-                 (contiene("PTM02", "≤ -1DE") && contiene("PTM02", "> -2DE")) || 
-                 (contiene("PTF25", "≤ -1DE") && contiene("PTF25", "> -2DE")) || 
-                 (contiene("PTM25", "≤ -1DE") && contiene("PTM25", "> -2DE"))) {
+      } else if (contiene("PT", "-1DE")) {
         calificacion = "Riesgo de desnutrición";
-      } else if ((contiene("PTF02", "≥ +1DE") && contiene("PTF02", "< +2DE")) || 
-                 (contiene("PTM02", "≥ +1DE") && contiene("PTM02", "< +2DE")) || 
-                 (contiene("PTF25", "≥ +1DE") && contiene("PTF25", "< +2DE")) || 
-                 (contiene("PTM25", "≥ +1DE") && contiene("PTM25", "< +2DE"))) {
-        calificacion = "Riesgo de sobrepeso";
-      } else if (contiene("PTF02", "≥ +2DE") || contiene("PTM02", "≥ +2DE") || 
-                 contiene("PTF25", "≥ +2DE") || contiene("PTM25", "≥ +2DE")) {
+      } else if (contiene("PT", "Normal")) {
+        calificacion = "Normal o Eutrófico";
+      } else if (contiene("PT", "+1DE")) {
         calificacion = "Sobrepeso";
+      } else if (contiene("PT", "+2DE")) {
+        calificacion = "Obesidad";
       }
-    } else if (esMayorDeCincoAños) {
-      if (contiene("PEF510", "≤ -2DE") || contiene("PEM510", "≤ -2DE") || 
-          contiene("IMCF519", "≤ -2DE") || contiene("IMCM519", "≤ -2DE")) {
+    } else {
+      if (contiene("IMC", "-2DE")) {
         calificacion = "Desnutrición";
-      } else if ((contiene("PEF510", "≤ -1DE") && contiene("PEF510", "> -2DE")) || 
-                 (contiene("PEM510", "≤ -1DE") && contiene("PEM510", "> -2DE")) || 
-                 (contiene("IMCF519", "≤ -1DE") && contiene("IMCF519", "> -2DE")) || 
-                 (contiene("IMCM519", "≤ -1DE") && contiene("IMCM519", "> -2DE"))) {
+      } else if (contiene("IMC", "-1DE")) {
         calificacion = "Riesgo de desnutrición";
-      } else if ((contiene("PEF510", "≥ +1DE") && contiene("PEF510", "< +2DE")) || 
-                 (contiene("PEM510", "≥ +1DE") && contiene("PEM510", "< +2DE")) || 
-                 (contiene("IMCF519", "≥ +1DE") && contiene("IMCF519", "< +2DE")) || 
-                 (contiene("IMCM519", "≥ +1DE") && contiene("IMCM519", "< +2DE"))) {
-        calificacion = "Riesgo de sobrepeso";
-      } else if (contiene("PEF510", "≥ +2DE") || contiene("PEM510", "≥ +2DE") || 
-                 contiene("IMCF519", "≥ +2DE") || contiene("IMCM519", "≥ +2DE")) {
+      } else if (contiene("IMC", "Normal")) {
+        calificacion = "Normal o Eutrófico";
+      } else if (contiene("IMC", "+1DE")) {
         calificacion = "Sobrepeso";
+      } else if (contiene("IMC", "+2DE")) {
+        calificacion = "Obesidad";
+      } else {
+        calificacion = "Obesidad Severa";
       }
     }
-  
     return calificacion;
   };
+
+  const calcularCalificacionEstatural = (evaluacionesTablas) => {
+    let calificacion = "No clasificado";
+    const contiene = (clave, rango) => evaluacionesTablas.some(evaluacion => 
+      evaluacion.clave.includes(clave) && evaluacion.descripcion.includes(rango)
+    );
+    if (contiene("TE", "-2DE")) {
+      calificacion = "Talla Baja";
+    } else if (contiene("TE", "-1DE")) {
+      calificacion = "Talla Normal Baja";
+    } else if (contiene("TE", "Normal")) {
+      calificacion = "Talla Normal";
+    } else if (contiene("TE", "+1DE")) {
+      calificacion = "Talla Normal Alta";
+    } else if (contiene("TE", "+2DE")) {
+      calificacion = "Talla Alta";
+    }
+    return calificacion
+  }
   
   const imc = calcularIMC();
   const clavesTablas = obtenerClavesTablas();
@@ -241,7 +247,7 @@ const EVNutricional = () => {
 
   return (
     <div>
-      <h1>Evaluación Nutricional</h1>
+      <h3>Evaluación Nutricional</h3>
       <div>
         <h2>Datos Paciente</h2>
         <label>Nombre:</label>
@@ -284,6 +290,7 @@ const EVNutricional = () => {
           onChange={(e) => setTalla(e.target.value)}
         />
       </div>
+      <button type="button" onClick={handleClear}>Borrar</button>
       <h2>Evaluación del Paciente</h2>
       {imc !== null ? (
         <>
@@ -291,13 +298,15 @@ const EVNutricional = () => {
           <p>IMC: {imc}</p>
           {descripcionesTablas.length > 0 ? (
             <div>
-              <h3>Descripciones de Tablas</h3>
+              <h2>Descripciones de Tablas</h2>
               <ul>
                 {descripcionesTablas.map((descripcion, index) => (
                   <li key={index}>{descripcion.descripcion}</li>
                 ))}
               </ul>
-              <h3>Calificación Nutricional: {calcularCalificacionNutricional(descripcionesTablas)}</h3>
+              <h4>Calificación Nutricional: {calcularCalificacionNutricional(descripcionesTablas)}</h4>
+              <h4>Calificación Estatural: {calcularCalificacionEstatural(descripcionesTablas)}</h4>
+              <h4>Diagnostico Nutricional: escolar/prescolar , ......</h4>
             </div>
           ) : (
             <p>No hay descripciones disponibles para mostrar.</p>
