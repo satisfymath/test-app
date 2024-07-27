@@ -2,17 +2,17 @@ import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import './Cart.css'; // Asegúrate de importar los estilos
 
-const Portafolios = () => {
+const Educaciones = () => {
   const { addToCart } = useContext(CartContext);
 
   const items = [
-    { id: 1, name: 'Portafolio 1', price: 200 },
-    { id: 2, name: 'Portafolio 2', price: 300 },
+    { id: 1, name: 'Curso de Nutrición', price: 100 },
+    { id: 2, name: 'Seminario de Salud', price: 150 },
   ];
 
   return (
     <div>
-      <h2>Portafolios</h2>
+      <h2>Educaciones</h2>
       <ul>
         {items.map((item) => (
           <li key={item.id}>
@@ -25,4 +25,4 @@ const Portafolios = () => {
   );
 };
 
-export default Portafolios;
+export default Educaciones;

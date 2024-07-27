@@ -1,0 +1,31 @@
+/* Estilos para el botón de añadir al carrito */
+.add-to-cart-btn {
+    background-color: #4caf50; /* Verde para el botón de añadir */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  /* Estilos para el botón de eliminar (X) */
+  .remove-from-cart-btn {
+    background-color: transparent;
+    color: #f44336; /* Rojo para el botón de eliminar */
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .remove-from-cart-btn:hover {
+    color: #e53935;
+    transform: scale(1.2);
+  }
