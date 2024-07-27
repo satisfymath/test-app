@@ -1,35 +1,134 @@
 /* Estilos para el fondo de la aplicación */
 body {
-  background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   position: relative;
-  padding: 20px;
-  background-color: rgba(248, 221, 255, 0.904);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+/* Estilo para el contenedor principal */
+#root {
+  position: relative; /* Necesario para el z-index */
+  z-index: 1; /* Coloca el contenido sobre la figura */
 }
 
-/* Estilos para tablas */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 90%;
-  margin: 20px auto;
-  box-shadow: 0 2px 3px rgba(228, 99, 0, 0.8);
-  background-color: rgba(255, 255, 255, 0.974);
-  color: #000000;
-  border-radius: 8px;
-  overflow: hidden;
+/* Estilo base para todas las figuras */
+.figura {
+  position: fixed; /* Asegúrate de que la figura sea posicionable */
+  z-index: 0; /* Coloca la figura detrás del contenido */
+  width: 5vw; /* Tamaño de la figura como un porcentaje del ancho de la ventana */
+  height: auto; /* Mantén la proporción si es necesario */
+  max-width: 100px; /* Opcional: establece un tamaño máximo para la figura */
+  min-width: 70px; /* Opcional: establece un tamaño máximo para la figura */
 }
 
-/* Estilos generales para celdas de la tabla */
-th, td {
-  border: 2px solid #ff9800;
-  padding: 12px;
-  text-align: left;
+/* Estilo para la figura */
+.figura1 {
+  top: 13%; /* Ajusta la posición vertical en porcentaje */
+  left: -1%; /* Ajusta la posición horizontal en porcentaje */
 }
 
-/* Estilos para encabezados de tabla */
-th {
-  background-color: rgba(233, 109, 0, 0.8);
-  font-weight: bold;
+/* Estilo para la figura */
+.figura2 {
+  top: 23%; /* Ajusta la posición vertical en porcentaje */
+  left: -1%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura3 {
+  top: 22%; /* Ajusta la posición vertical en porcentaje */
+  left: 97%; /* Ajusta la posición horizontal en porcentaje */
+  transform: rotate(-90deg);
+}
+
+/* Estilo para la figura */
+.figura4 {
+  top: 32%; /* Ajusta la posición vertical en porcentaje */
+  left: -1%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura5 {
+  top: 82%; /* Ajusta la posición vertical en porcentaje */
+  left: 97%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura6 {
+  top: 42%; /* Ajusta la posición vertical en porcentaje */
+  left: -1%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura7 {
+  top: 55%; /* Ajusta la posición vertical en porcentaje */
+  left: -2%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura8 {
+  top: 13%; /* Ajusta la posición vertical en porcentaje */
+  left: 96%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura9 {
+  top: 65%; /* Ajusta la posición vertical en porcentaje */
+  left: -2%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura10 {
+  top: 76%; /* Ajusta la posición vertical en porcentaje */
+  left: -2%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura11 {
+  top: 72%; /* Ajusta la posición vertical en porcentaje */
+  left: 96%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura12 {
+  top: 62%; /* Ajusta la posición vertical en porcentaje */
+  left: 96.5%; /* Ajusta la posición horizontal en porcentaje */
+  transform: rotate(-90deg);
+}
+
+/* Estilo para la figura */
+.figura13 {
+  top: 52%; /* Ajusta la posición vertical en porcentaje */
+  left: 97%; /* Ajusta la posición horizontal en porcentaje */
+  transform: rotate(-120deg);
+}
+
+/* Estilo para la figura */
+.figura14 {
+  top: 42%; /* Ajusta la posición vertical en porcentaje */
+  left: 97%; /* Ajusta la posición horizontal en porcentaje */
+  transform: rotate(-120deg);
+}
+
+/* Estilo para la figura */
+.figura15 {
+  top: 33%; /* Ajusta la posición vertical en porcentaje */
+  left: 97%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+/* Estilo para la figura */
+.figura16 {
+  top: 86%; /* Ajusta la posición vertical en porcentaje */
+  left: -2%; /* Ajusta la posición horizontal en porcentaje */
+}
+
+.figura img {
+  width: 100%; /* Ajusta la imagen al contenedor */
+  height: auto; /* Mantén la proporción de la imagen */
 }
 
 /* Estilos para el título h2 */
@@ -56,33 +155,6 @@ h3 {
 /* Estilos específicos para "niñas" */
 h2.ninas {
   color: #ff7300;
-}
-
-table.ninas th, table.ninas td {
-  border: 2px solid #ff7300;
-}
-
-table.ninas th {
-  background-color: rgba(233, 109, 0, 0.8);
-}
-
-/* Estilos específicos para "niños" */
-h2.ninos {
-  color: #4caf50;
-}
-
-table.ninos th, table.ninos td {
-  border: 2px solid #4caf50;
-}
-
-table.ninos th {
-  background-color: rgba(76, 175, 80, 0.8);
-}
-
-/* Estilos para filas de tabla al pasar el ratón */
-tbody tr:hover {
-  background-color: rgba(43, 225, 61, 0.221);
-  transition: background-color 0.3s ease;
 }
 
 /* Estilos para botones */

@@ -1,0 +1,52 @@
+/* Estilos para tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 2px 3px rgba(228, 99, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.974);
+    color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Estilos generales para celdas de la tabla */
+  th, td {
+    border: 2px solid #ff9800;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Estilos para encabezados de tabla */
+  th {
+    background-color: rgba(233, 109, 0, 0.8);
+    font-weight: bold;
+  }
+  
+  table.ninas th, table.ninas td {
+    border: 2px solid #ff7300;
+  }
+  
+  table.ninas th {
+    background-color: rgba(233, 109, 0, 0.8);
+  }
+  
+  /* Estilos específicos para "niños" */
+  h2.ninos {
+    color: #4caf50;
+  }
+  
+  table.ninos th, table.ninos td {
+    border: 2px solid #4caf50;
+  }
+  
+  table.ninos th {
+    background-color: rgba(76, 175, 80, 0.8);
+  }
+  
+  /* Estilos para filas de tabla al pasar el ratón */
+  tbody tr:hover {
+    background-color: rgba(43, 225, 61, 0.221);
+    transition: background-color 0.3s ease;
+  }
