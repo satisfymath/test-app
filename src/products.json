@@ -208,5 +208,175 @@
       "description": "This is the description for Tablas adulto y adulto mayor",
       "image": "portafolios/Tablas adulto y adulto mayor.png"
     }
+  },
+  "educaciones": {
+    "Alimentacioin en el deportista": {
+      "title": "Alimentacioin en el deportista",
+      "price": 10,
+      "description": "This is the description for Alimentacioin en el deportista",
+      "image": "educaciones/Alimentacioin en el deportista.png"
+    },
+    "Alimentacion complementaria": {
+      "title": "Alimentacion complementaria",
+      "price": 20,
+      "description": "This is the description for Alimentacion complementaria",
+      "image": "educaciones/Alimentacion complementaria.png"
+    },
+    "Alimentacion en el adolecente": {
+      "title": "Alimentacion en el adolecente",
+      "price": 30,
+      "description": "This is the description for Alimentacion en el adolecente",
+      "image": "educaciones/Alimentacion en el adolecente.png"
+    },
+    "Alimentacion en el preescolar 2 a 5": {
+      "title": "Alimentacion en el preescolar 2 a 5",
+      "price": 40,
+      "description": "This is the description for Alimentacion en el preescolar 2 a 5",
+      "image": "educaciones/Alimentacion en el preescolar 2 a 5.png"
+    },
+    "Alimentacion en en el escolar 6 a 10": {
+      "title": "Alimentacion en en el escolar 6 a 10",
+      "price": 50,
+      "description": "This is the description for Alimentacion en en el escolar 6 a 10",
+      "image": "educaciones/Alimentacion en en el escolar 6 a 10.png"
+    },
+    "Alimentacion Saludable": {
+      "title": "Alimentacion Saludable",
+      "price": 60,
+      "description": "This is the description for Alimentacion Saludable",
+      "image": "educaciones/Alimentacion Saludable.png"
+    },
+    "Alimentacion vegeteriana": {
+      "title": "Alimentacion vegeteriana",
+      "price": 70,
+      "description": "This is the description for Alimentacion vegeteriana",
+      "image": "educaciones/Alimentacion vegeteriana.png"
+    },
+    "alimentacuin en la embarazada": {
+      "title": "alimentacuin en la embarazada",
+      "price": 80,
+      "description": "This is the description for alimentacuin en la embarazada",
+      "image": "educaciones/alimentacuin en la embarazada.png"
+    },
+    "Anemia": {
+      "title": "Anemia",
+      "price": 90,
+      "description": "This is the description for Anemia",
+      "image": "educaciones/Anemia.png"
+    },
+    "Dieta baja en fodmap": {
+      "title": "Dieta baja en fodmap",
+      "price": 100,
+      "description": "This is the description for Dieta baja en fodmap",
+      "image": "educaciones/Dieta baja en fodmap.png"
+    },
+    "Dieta hipocalorica": {
+      "title": "Dieta hipocalorica",
+      "price": 110,
+      "description": "This is the description for Dieta hipocalorica",
+      "image": "educaciones/Dieta hipocalorica.png"
+    },
+    "Dieta neuropenica": {
+      "title": "Dieta neuropenica",
+      "price": 120,
+      "description": "This is the description for Dieta neuropenica",
+      "image": "educaciones/Dieta neuropenica.png"
+    },
+    "Dieta sop": {
+      "title": "Dieta sop",
+      "price": 130,
+      "description": "This is the description for Dieta sop",
+      "image": "educaciones/Dieta sop.png"
+    },
+    "Dislipidemia": {
+      "title": "Dislipidemia",
+      "price": 140,
+      "description": "This is the description for Dislipidemia",
+      "image": "educaciones/Dislipidemia.png"
+    },
+    "Enfermedad renal": {
+      "title": "Enfermedad renal",
+      "price": 150,
+      "description": "This is the description for Enfermedad renal",
+      "image": "educaciones/Enfermedad renal.png"
+    },
+    "Guia anticipatoria 1 a 2 anos": {
+      "title": "Guia anticipatoria 1 a 2 anos",
+      "price": 160,
+      "description": "This is the description for Guia anticipatoria 1 a 2 anos",
+      "image": "educaciones/Guia anticipatoria 1 a 2 anos.png"
+    },
+    "Hipertension Arterial": {
+      "title": "Hipertension Arterial",
+      "price": 170,
+      "description": "This is the description for Hipertension Arterial",
+      "image": "educaciones/Hipertension Arterial.png"
+    },
+    "Hipotiroidismo": {
+      "title": "Hipotiroidismo",
+      "price": 180,
+      "description": "This is the description for Hipotiroidismo",
+      "image": "educaciones/Hipotiroidismo.png"
+    },
+    "Lactancia materna": {
+      "title": "Lactancia materna",
+      "price": 190,
+      "description": "This is the description for Lactancia materna",
+      "image": "educaciones/Lactancia materna.png"
+    },
+    "picado humedo": {
+      "title": "picado humedo",
+      "price": 200,
+      "description": "This is the description for picado humedo",
+      "image": "educaciones/picado humedo.png"
+    },
+    "Regimen blando": {
+      "title": "Regimen blando",
+      "price": 210,
+      "description": "This is the description for Regimen blando",
+      "image": "educaciones/Regimen blando.png"
+    },
+    "Regimen diabetico": {
+      "title": "Regimen diabetico",
+      "price": 220,
+      "description": "This is the description for Regimen diabetico",
+      "image": "educaciones/Regimen diabetico.png"
+    },
+    "Regimen hiposodico": {
+      "title": "Regimen hiposodico",
+      "price": 230,
+      "description": "This is the description for Regimen hiposodico",
+      "image": "educaciones/Regimen hiposodico.png"
+    },
+    "Regimen liquido": {
+      "title": "Regimen liquido",
+      "price": 240,
+      "description": "This is the description for Regimen liquido",
+      "image": "educaciones/Regimen liquido.png"
+    },
+    "Regimen liviano": {
+      "title": "Regimen liviano",
+      "price": 250,
+      "description": "This is the description for Regimen liviano",
+      "image": "educaciones/Regimen liviano.png"
+    },
+    "regimen papilla gastrostomia": {
+      "title": "regimen papilla gastrostomia",
+      "price": 260,
+      "description": "This is the description for regimen papilla gastrostomia",
+      "image": "educaciones/regimen papilla gastrostomia.png"
+    },
+    "regimen papilla para sonda": {
+      "title": "regimen papilla para sonda",
+      "price": 270,
+      "description": "This is the description for regimen papilla para sonda",
+      "image": "educaciones/regimen papilla para sonda.png"
+    },
+    "Regimen papilla": {
+      "title": "Regimen papilla",
+      "price": 280,
+      "description": "This is the description for Regimen papilla",
+      "image": "educaciones/Regimen papilla.png"
+    }
   }
 }
