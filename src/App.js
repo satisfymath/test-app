@@ -13,6 +13,8 @@ import { CartProvider } from './CartContext'; // Asegúrate de que la ruta es co
 import CartIconButton from './CartIconButton'; // Asegúrate de que la ruta es correcta
 
 const App = () => {
+  console.log('Rendering App component');
+
   return (
     <FormularioProvider>
       <CartProvider>
@@ -35,13 +37,31 @@ const App = () => {
           <Toolbar /> {/* Add a Toolbar to offset the fixed AppBar */}
           <Container>
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/educaciones" component={Educaciones} />
-              <Route path="/portafolios" component={Portafolios} />
-              <Route path="/evnutricional" component={EVNutricional} />
-              <Route path="/cart" component={Cart} />
+              <Route exact path="/" render={() => {
+                console.log('Navigating to Home');
+                return <Home />;
+              }} />
+              <Route path="/educaciones" render={() => {
+                console.log('Navigating to Educaciones');
+                return <Educaciones />;
+              }} />
+              <Route path="/portafolios" render={() => {
+                console.log('Navigating to Portafolios');
+                return <Portafolios />;
+              }} />
+              <Route path="/evnutricional" render={() => {
+                console.log('Navigating to EVNutricional');
+                return <EVNutricional />;
+              }} />
+              <Route path="/cart" render={() => {
+                console.log('Navigating to Cart');
+                return <Cart />;
+              }} />
               {/* Redirige cualquier ruta no definida a la página de inicio */}
-              <Redirect to="/" />
+              <Route path="*" render={() => {
+                console.log('Redirecting to Home');
+                return <Redirect to="/" />;
+              }} />
             </Switch>
           </Container>
         </Router>
