@@ -185,3 +185,26 @@ h2.ninas {
 .nav-buttons {
   display: flex;
 }
+
+/* Estilo para el icono de carga */
+.icon-loading {
+  width: 100px; /* Ajusta el tamaño del icono */
+  height: 100px; /* Ajusta el tamaño del icono */
+  margin: 0 auto;
+  display: block;
+  animation: spin 2s linear infinite; /* Gira el icono */
+}
+
+/* Animación de rotación */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Estilo para ocultar el contenido mientras se carga */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
