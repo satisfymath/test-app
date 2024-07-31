@@ -39,19 +39,19 @@
   /* Estilo para las figuras con posiciones específicas */
   .figura1 { top: 13%; left: -1%; }
   .figura2 { top: 23%; left: -1%; }
-  .figura3 { top: 22%; left: 94%; }
+  .figura3 { top: 22%; left: 96%; }
   .figura4 { top: 32%; left: -1%; }
-  .figura5 { top: 82%; left: 94%; }
+  .figura5 { top: 82%; left: 96%; }
   .figura6 { top: 42%; left: -1%; }
   .figura7 { top: 55%; left: -1%; }
-  .figura8 { top: 13%; left: 94%; }
+  .figura8 { top: 13%; left: 96%; }
   .figura9 { top: 65%; left: -1%; }
   .figura10 { top: 76%; left: -1%; }
-  .figura11 { top: 72%; left: 94%; }
-  .figura12 { top: 62%; left: 94%; }
-  .figura13 { top: 52%; left: 94%; }
-  .figura14 { top: 42%; left: 94%; }
-  .figura15 { top: 33%; left: 94%; }
+  .figura11 { top: 72%; left: 96%; }
+  .figura12 { top: 62%; left: 96%; }
+  .figura13 { top: 52%; left: 96%; }
+  .figura14 { top: 42%; left: 96%; }
+  .figura15 { top: 33%; left: 96%; }
   .figura16 { top: 86%; left: -1%; }
   
   /* Asegura que las imágenes se ajusten al contenedor */

@@ -245,12 +245,12 @@ const EVNutricional = () => {
   const clavesTablas = obtenerClavesTablas();
   const descripcionesTablas = obtenerDescripcionesTablas(clavesTablas);
   const edadCronologica = calcularEdadCronologica(fechaNacimiento);
-
+  
   return (
-    <div>
+    <form className="formev">
       <h3>Evaluación Nutricional</h3>
-      <div>
-        <h2>Datos Paciente</h2>
+      <h2>Datos Paciente</h2>
+      <div className="form-group">
         <label>Nombre:</label>
         <input
           type="text"
@@ -258,38 +258,42 @@ const EVNutricional = () => {
           onChange={(e) => setNombre(e.target.value)}
         />
       </div>
-      <div>
-        <label>Fecha de Nacimiento:</label>
-        <input
-          type="date"
-          placeholder="dd-mm-yyyy"
-          value={fechaNacimiento}
-          onChange={(e) => setFechaNacimiento(e.target.value)}
-        />
+      <div className="form-row">
+        <div className="form-group">
+          <label>Fecha de Nacimiento:</label>
+          <input
+            type="date"
+            placeholder="dd-mm-yyyy"
+            value={fechaNacimiento}
+            onChange={(e) => setFechaNacimiento(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Sexo:</label>
+          <select value={sexo} onChange={(e) => setSexo(e.target.value)}>
+            <option value="">Seleccionar...</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+          </select>
+        </div>
       </div>
-      <div>
-        <label>Sexo:</label>
-        <select value={sexo} onChange={(e) => setSexo(e.target.value)}>
-          <option value="">Seleccionar...</option>
-          <option value="Femenino">Femenino</option>
-          <option value="Masculino">Masculino</option>
-        </select>
-      </div>
-      <div>
-        <label>Peso (kg):</label>
-        <input
-          type="number"
-          value={peso}
-          onChange={(e) => setPeso(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Talla (cm):</label>
-        <input
-          type="number"
-          value={talla}
-          onChange={(e) => setTalla(e.target.value)}
-        />
+      <div className="form-row">
+        <div className="form-group">
+          <label>Peso (kg):</label>
+          <input
+            type="number"
+            value={peso}
+            onChange={(e) => setPeso(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Talla (cm):</label>
+          <input
+            type="number"
+            value={talla}
+            onChange={(e) => setTalla(e.target.value)}
+          />
+        </div>
       </div>
       <button type="button" onClick={handleClear}>Borrar</button>
       <h2>Evaluación del Paciente</h2>
@@ -307,7 +311,7 @@ const EVNutricional = () => {
               </ul>
               <h4>Calificación Nutricional: {calcularCalificacionNutricional(descripcionesTablas)}</h4>
               <h4>Calificación Estatural: {calcularCalificacionEstatural(descripcionesTablas)}</h4>
-              <h4>Diagnostico Nutricional: escolar/prescolar , ......</h4>
+              <h4>Diagnóstico Nutricional: escolar/prescolar , ......</h4>
             </div>
           ) : (
             <p>No hay descripciones disponibles para mostrar.</p>
@@ -316,7 +320,7 @@ const EVNutricional = () => {
       ) : (
         <p>No se ha calculado el IMC aún.</p>
       )}
-    </div>
+    </form>
   );
 };
 
