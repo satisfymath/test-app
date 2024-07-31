@@ -1,0 +1,358 @@
+/* Estilos generales para la página */
+html, body {
+    height: auto; /* Permite el desplazamiento vertical */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+/* Estilos para el fondo de la página de login */
+.login-container {
+    position: fixed; /* Asegura que ocupa toda la ventana */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ocupa el 100% del alto de la vista */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Fondo claro para la página de login */
+    text-align: center;
+    overflow: hidden; /* Elimina la barra de desplazamiento solo en el contenedor de login */
+    padding: 20px; /* Espacio alrededor del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total */
+}
+
+/* Estilos para el formulario de login */
+.login-form {
+    background: #fff; /* Fondo blanco para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ancho del formulario como porcentaje del contenedor */
+    max-width: 400px; /* Ancho máximo del formulario */
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total */
+    margin: auto; /* Centra el formulario horizontalmente */
+    display: flex; /* Usa flexbox para centrar contenido */
+    flex-direction: column; /* Coloca el contenido en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos para el logo */
+.logo {
+    max-width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+/* Estilos del título del formulario */
+.login-form h3 {
+    margin: 0 0 20px; /* Espacio debajo del título */
+    font-size: 1.3em; /* Tamaño de fuente del título */
+    color: #333; /* Color del título */
+}
+
+/* Estilos para los campos del formulario */
+.login-form div {
+    width: 100%; /* Asegura que los campos ocupen el 100% del ancho del formulario */
+    margin-bottom: 15px; /* Espacio entre los campos del formulario */
+}
+
+/* Estilos para las etiquetas */
+.login-form label {
+    display: block;
+    margin-bottom: 5px; /* Espacio debajo de las etiquetas */
+    font-weight: bold;
+    color: #666; /* Color de las etiquetas */
+}
+
+/* Estilos para los campos de entrada */
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total */
+    transition: border-color 0.3s ease; /* Transición para el cambio de color del borde */
+}
+
+/* Estilos para el campo de entrada al enfocar */
+.login-form input:focus {
+    border-color: #d6aaff; /* Color del borde al enfocar */
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+/* Estilos para el botón */
+.login-form button {
+    background-color: #d6aaff; /* Color de fondo del botón */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Transición para el cambio de color del fondo */
+    width: 100%; /* Ancho del botón */
+}
+
+/* Estilos para el botón al pasar el ratón por encima */
+.login-form button:hover {
+    background-color: #b68eff; /* Color del botón al pasar el ratón por encima */
+}
+
+/* Estilos para el botón al hacer clic */
+.login-form button:active {
+    background-color: #a575ff; /* Color del botón al hacer clic */
+}
+
+/* Contenedor principal de la página de inicio */
+.home-container {
+padding: 20px;
+}
+
+/* Sección de categorías */
+.category-section {
+text-align: center;
+}
+
+/* Contenedor de productos */
+.products-grid {
+display: grid;
+gap: 20px; /* Espacio entre productos */
+padding: 20px;
+box-sizing: border-box;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el número de columnas basado en el tamaño del contenedor */
+justify-content: center; /* Centra la cuadrícula de productos */
+}
+
+/* Estilo para cada producto */
+.product {
+border: 1px solid #ddd;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+background-color: #fff;
+/* Asegúrate de que el producto no crezca más allá del ancho máximo deseado */
+max-width: 100%; /* Asegúrate de que el producto ocupe el 100% del espacio de la columna */
+}
+
+/* Imagen del producto */
+.product-image {
+width: 100%;
+height: auto;
+}
+
+/* Título del producto */
+.product-title {
+margin: 16px;
+font-size: 1.5em; /* Ajusta el tamaño del texto según sea necesario */
+color: #333;
+}
+
+/* Información del producto */
+.product-info {
+padding: 0 16px 16px;
+}
+
+/* Descripción del producto */
+.product-description {
+margin: 0;
+font-size: 0.9em; /* Ajusta el tamaño del texto según sea necesario */
+color: #666;
+}
+
+/* Precio del producto */
+.product-price {
+margin: 8px 0;
+font-size: 1.2em; /* Ajusta el tamaño del texto según sea necesario */
+color: #333;
+}
+
+/* Botón para añadir al carrito */
+.add-to-cart-btn {
+background-color: #d6aaffc5;
+color: #fff;
+border: none;
+border-radius: 4px;
+padding: 10px;
+cursor: pointer;
+font-size: 1em;
+transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+background-color: #d6aaff;
+}
+
+/* Estilos para el título h2 */
+h2 {
+text-align: center;
+font-size: 2em;
+color: #690073;
+text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Estilos para el título h3 */
+h3 {
+text-align: center;
+font-size: 3em;
+color: #690073;
+text-shadow: 2px 2px 2px rgba(255, 189, 255, 0.6);
+font-family: "Playwrite AR", cursive;
+}
+
+/* Estilos específicos para "niñas" */
+h2.ninas {
+color: #ff7300;
+}
+
+/* Estilos para la barra de navegación */
+.navbar a {
+color: #fcfcfc;
+text-decoration: none;
+margin: 0 10px;
+}
+
+.navbar a:hover {
+color: #d900ff;
+}
+
+.navbar .toolbar {
+background-color: #d6aaffc5;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px; /* Añade un poco de espacio alrededor */
+}
+
+.app-icon {
+margin-right: 10px;
+width: 60px; /* Ajusta el tamaño de la imagen según tus necesidades */
+height: 60px; /* Mantén la proporción si es necesario */
+}
+
+.app-title {
+flex-grow: 1; /* Esto hace que el título ocupe el espacio restante disponible */
+font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+.nav-buttons {
+display: flex;
+}
+
+/* Estilo para el icono de carga */
+.icon-loading {
+width: 100px; /* Ajusta el tamaño del icono */
+height: 100px; /* Ajusta el tamaño del icono */
+margin: 0 auto;
+display: block;
+animation: spin 2s linear infinite; /* Gira el icono */
+}
+
+.nutritrust-icon {
+width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+height: 50px; /* Mantén la proporción si es necesario */
+}
+
+  /* Contenedor principal del carrito */
+.cart-container {
+  padding: 2% 4%; /* Padding en porcentajes */
+  max-width: 90%; /* Ancho máximo en porcentaje */
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 0.5vw; /* Radio de borde en viewport width */
+  box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Título del carrito */
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 2%; /* Margen inferior en porcentaje */
+  color: #333;
+  font-size: 2vw; /* Tamaño de fuente en viewport width */
+  line-height: 1.2; /* Espaciado entre líneas proporcional al tamaño de fuente */
+}
+
+/* Lista de productos en el carrito */
+.cart-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Elemento de la lista del carrito */
+.cart-list-item {
+  padding: 2%;
+  margin-bottom: 2%; /* Margen inferior en porcentaje */
+  background-color: #fff;
+  border-radius: 0.25vw; /* Radio de borde en viewport width */
+  box-shadow: 0 0.1vw 0.15vw rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Imagen del producto */
+.cart-list-item img {
+  width: 20vw; /* Ancho en viewport width */
+  height: auto; /* Altura automática para mantener proporción */
+  object-fit: cover;
+  border-radius: 0.25vw; /* Radio de borde en viewport width */
+  margin-right: 2%; /* Margen derecho en porcentaje */
+}
+
+/* Información del producto en el carrito */
+.cart-list-item .product-info {
+  flex-grow: 1;
+  margin-right: 2%; /* Margen derecho en porcentaje */
+}
+
+/* Título y precio del producto */
+.cart-list-item .product-title {
+  font-size: 1.5vw; /* Tamaño de fuente en viewport width */
+  font-weight: bold;
+  margin: 0;
+}
+
+.cart-list-item .product-price {
+  font-size: 1.2vw; /* Tamaño de fuente en viewport width */
+  color: #666;
+}
+
+/* Botón de eliminar producto */
+.cart-list-item .remove-button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1vw; /* Tamaño de fuente en viewport width */
+  font-weight: bold;
+}
+
+/* Botón de pago */
+.pay-button {
+  display: block;
+  width: 100%; /* Ancho completo del contenedor */
+  padding: 2%; /* Padding en porcentaje */
+  margin-top: 4%; /* Margen superior en porcentaje */
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 0.25vw; /* Radio de borde en viewport width */
+  font-size: 1.5vw; /* Tamaño de fuente en viewport width */
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.pay-button:hover {
+  background-color: #2980b9;
+}
+
+  

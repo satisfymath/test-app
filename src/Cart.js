@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
 import CartProduct from './CartProduct';
-import './Cart.css';
+// import './Cart.css';
 
 const Cart = () => {
   // Obtener el contexto del carrito

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
-import './Product.css';
+// import './Product.css';
+// import './Home.css'; // Asegúrate de que este archivo CSS esté correctamente configurado
+import './styles.css'
 
 const Product = ({ id, title, price, description, image }) => {
   const { addToCart } = useContext(CartContext);

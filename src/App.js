@@ -10,7 +10,8 @@ import Cart from './Cart';
 import User from './User'; // Importa el componente User
 import UserIconButton from './UserIconButton'; // Importa el componente UserIconButton
 import CartIconButton from './CartIconButton'; // Asegúrate de que la ruta es correcta
-import './App.css';
+import './styles.css';
+import './Figurethemes.css';
 import barIcon from './baricon.png';
 import nutritrusticon from './nutritrusticon.png';
 import { FormularioProvider } from './FormularioContext'; // Importa el FormularioProvider correctamente
@@ -54,10 +55,10 @@ const App = () => {
             <Container>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/evnutricional" element={<EVNutricional />} />
                 <Route path="/educaciones" element={<Educaciones />} />
                 <Route path="/portafolios" element={<Portafolios />} />
                 <Route path="/nutritrust" element={<NutriTrust />} />
+                <Route path="/evnutricional" element={<EVNutricional />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/user" element={<User />} /> {/* Añade la ruta User */}
                 <Route path="*" element={() => {

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './Home.css'; // Asegúrate de que este archivo CSS esté correctamente configurado
+// import './Home.css'; // Asegúrate de que este archivo CSS esté correctamente configurado
 import Product from './Product'; // Asegúrate de que la ruta es correcta
 import { CartContext } from './CartContext'; // Asegúrate de que la ruta es correcta
 import products from './products.json'; // Asegúrate de que la ruta es correcta
@@ -15,7 +15,7 @@ const Portafolios = () => {
     <div className="home-container"> {/* Puedes cambiar el nombre de la clase si lo prefieres */}
       {Object.entries(products).map(([category, items]) => (
         <div key={category} className="category-section">
-          <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+          <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
           <div className="products-grid">
             {Object.entries(items).map(([id, item]) => (
               <Product

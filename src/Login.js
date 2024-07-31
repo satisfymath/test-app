@@ -1,7 +1,5 @@
-// src/Login.js
 import React, { useState } from 'react';
-import nutritrustlogo from './nutritrustlogo.png'; // Importa el logo
-import './NutriTrust.css'; // Importa el archivo CSS
+import nutritrustlogo from './nutritrustlogo.png'; // Asegúrate de que esta ruta sea correcta
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -9,45 +7,38 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para autenticar al usuario
     if (username === 'Arrt' && password === '1998') {
-      if (typeof onLogin === 'function') {
-        onLogin(); // Llama a la función onLogin si las credenciales son correctas
-      } else {
-        console.error('onLogin prop is not a function');
-      }
+      onLogin(); // Llama a la función onLogin si las credenciales son correctas
     } else {
       alert('Credenciales incorrectas');
     }
   };
 
   return (
-    <div className="login-container">
+    <div className="login-form">
       <img src={nutritrustlogo} alt="NutriTrust Logo" className="logo" />
-      <div className="login-form">
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Usuario:</label>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label>Contraseña:</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit">Entrar</button>
-        </form>
-      </div>
+      <h3>Bienvenido a NutriTrust</h3>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Usuario:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Contraseña:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Iniciar sesión</button>
+      </form>
     </div>
   );
 };

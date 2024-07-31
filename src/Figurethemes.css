@@ -1,0 +1,62 @@
+/* Estilo para el contenedor principal */
+#root {
+    position: relative; /* Necesario para el z-index */
+    z-index: 1; /* Coloca el contenido sobre la figura */
+  }
+  
+  /* Contenedor de las figuras */
+  .figuras-container {
+    position: fixed; /* Fijo para estar en la misma posición al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Asegura que el contenedor cubra todo el ancho visible */
+    height: 100vh; /* Asegura que el contenedor cubra toda la altura visible */
+    overflow: hidden; /* Evita el recorte y el desplazamiento */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las figuras horizontalmente */
+    align-items: center; /* Centra las figuras verticalmente */
+    z-index: 0; /* Asegúrate de que esté detrás del contenido */
+  }
+  
+  /* Estilo base para todas las figuras */
+  .figura {
+    position: absolute; /* O usa relativo si se requiere posicionar las figuras en relación con el contenedor */
+    z-index: 0; /* Coloca la figura detrás del contenido */
+    width: 5vw; /* Tamaño de la figura como un porcentaje del ancho de la ventana */
+    height: auto; /* Mantén la proporción si es necesario */
+    max-width: 100px; /* Opcional: establece un tamaño máximo para la figura */
+    min-width: 70px; /* Opcional: establece un tamaño mínimo para la figura */
+    transform-origin: center; /* Ajusta el punto de origen para el zoom */
+    transition: transform 0.3s ease; /* Suaviza el cambio de tamaño */
+  }
+  
+  /* Estilo para cuando se aplica zoom */
+  .zoom {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% de su tamaño original */
+  }
+  
+  /* Estilo para las figuras con posiciones específicas */
+  .figura1 { top: 13%; left: -1%; }
+  .figura2 { top: 23%; left: -1%; }
+  .figura3 { top: 22%; left: 94%; }
+  .figura4 { top: 32%; left: -1%; }
+  .figura5 { top: 82%; left: 94%; }
+  .figura6 { top: 42%; left: -1%; }
+  .figura7 { top: 55%; left: -1%; }
+  .figura8 { top: 13%; left: 94%; }
+  .figura9 { top: 65%; left: -1%; }
+  .figura10 { top: 76%; left: -1%; }
+  .figura11 { top: 72%; left: 94%; }
+  .figura12 { top: 62%; left: 94%; }
+  .figura13 { top: 52%; left: 94%; }
+  .figura14 { top: 42%; left: 94%; }
+  .figura15 { top: 33%; left: 94%; }
+  .figura16 { top: 86%; left: -1%; }
+  
+  /* Asegura que las imágenes se ajusten al contenedor */
+  .figura img {
+    width: 100%;
+    height: auto; /* Mantén la proporción de la imagen */
+  }
+  

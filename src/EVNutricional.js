@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { FormularioContext } from './FormularioContext';
 import tables from './tables.json';
+// import './styles.css'
 
 const tablaDescripciones = {
   "PEF05": "Peso por edad en niñas desde el nacimiento a 5 años",
