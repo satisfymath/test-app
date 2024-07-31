@@ -7,20 +7,19 @@ import Portafolios from './Portafolios';
 import NutriTrust from './NutriTrust';
 import EVNutricional from './EVNutricional';
 import Cart from './Cart';
-import User from './User'; // Importa el componente User
-import UserIconButton from './UserIconButton'; // Importa el componente UserIconButton
-import CartIconButton from './CartIconButton'; // Asegúrate de que la ruta es correcta
+import User from './User';
+import UserIconButton from './UserIconButton';
+import CartIconButton from './CartIconButton';
 import './styles.css';
 import './Figurethemes.css';
 import barIcon from './baricon.png';
 import nutritrusticon from './nutritrusticon.png';
-import { FormularioProvider } from './FormularioContext'; // Importa el FormularioProvider correctamente
-import { CartProvider } from './CartContext'; // Importa el componente CartProvider
-import { AccountProvider } from './AccountContext'; // Corrige la importación del componente AccountProvider
+import { FormularioProvider } from './FormularioContext';
+import { CartProvider } from './CartContext';
+import { AccountProvider } from './AccountContext';
 
 const App = () => {
   useEffect(() => {
-    // Set initial values to null in localStorage
     localStorage.setItem('formulario', JSON.stringify(null));
     localStorage.setItem('cart', JSON.stringify(null));
     localStorage.setItem('account', JSON.stringify(null));
@@ -33,7 +32,9 @@ const App = () => {
       <CartProvider>
         <AccountProvider>
           <Router>
-            <AppBar position="fixed" className="navbar">
+            <AppBar
+              sx={{ backgroundColor: 'd6aaffc5' }} className="navbar" // Aplica el color de fondo aquí
+            >
               <Toolbar className="toolbar">
                 <img src={barIcon} alt="Icono" className="app-icon" />
                 <Typography variant="h6" className="app-title">

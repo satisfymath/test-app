@@ -66,23 +66,22 @@
     </div>
   </div>
 
-  <!-- Script para permutación aleatoria y zoom con scroll -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Arreglo con los nombres de las imágenes
       const imageNames = Array.from({ length: 16 }, (_, i) => `${i + 1}.png`);
-
+  
       // Selecciona todas las figuras
       const figuras = document.querySelectorAll('.figura img');
-
+  
       // Mezcla las imágenes aleatoriamente
       const shuffledImageNames = imageNames.sort(() => 0.5 - Math.random());
-
+  
       // Asigna las imágenes aleatorias a las figuras y aplica transformaciones
       figuras.forEach((figura, index) => {
         const imageName = shuffledImageNames[index];
         figura.src = `%PUBLIC_URL%/figuras/${imageName}`;
-
+  
         // Aplica rotaciones específicas basadas en el nombre de la imagen
         switch (imageName) {
           case '13.png':
@@ -99,20 +98,20 @@
             // Aplica una rotación por defecto si es necesario
             figura.parentElement.style.transform = 'rotate(0deg)';
         }
-
+  
         // Aplica una escala aleatoria entre 96% y 120%
         const minScale = 1;
         const maxScale = 1.25;
         const randomScale = Math.random() * (maxScale - minScale) + minScale;
         figura.parentElement.style.transform += ` scale(${randomScale})`;
       });
-
+  
       // Variables para el zoom
       let zoomLevel = 1;
       const zoomStep = 0.1; // Ajusta el paso del zoom
       const minZoom = 0.8; // Escala mínima (80%)
       const maxZoom = 2;   // Escala máxima (200%)
-
+  
       // Función para actualizar la escala
       const updateZoom = (delta) => {
         zoomLevel += delta * zoomStep;
@@ -122,14 +121,52 @@
           figura.style.transform = `scale(${zoomLevel})`;
         });
       };
-
-      // Evento de scroll para zoom
+  
+      // Evento de scroll para zoom (escritorio)
       document.addEventListener('wheel', (event) => {
         const delta = event.deltaY < 0 ? 1 : -1; // Detecta la dirección del scroll
         updateZoom(delta);
         event.preventDefault(); // Previene el desplazamiento de la página
       });
+  
+      // Variables para el zoom táctil
+      let startDistance = null;
+      const updateZoomWithPinch = (event) => {
+        if (event.touches.length === 2) {
+          const x1 = event.touches[0].clientX;
+          const y1 = event.touches[0].clientY;
+          const x2 = event.touches[1].clientX;
+          const y2 = event.touches[1].clientY;
+          const distance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+          
+          if (startDistance) {
+            const zoomChange = distance / startDistance - 1;
+            updateZoom(zoomChange);
+          }
+          
+          startDistance = distance;
+        }
+      };
+  
+      // Maneja el inicio de un gesto táctil
+      document.addEventListener('touchstart', (event) => {
+        if (event.touches.length === 2) {
+          const x1 = event.touches[0].clientX;
+          const y1 = event.touches[0].clientY;
+          const x2 = event.touches[1].clientX;
+          const y2 = event.touches[1].clientY;
+          startDistance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+        }
+      }, { passive: false });
+  
+      // Maneja el movimiento de un gesto táctil
+      document.addEventListener('touchmove', updateZoomWithPinch, { passive: false });
+  
+      // Maneja el fin de un gesto táctil
+      document.addEventListener('touchend', () => {
+        startDistance = null;
+      });
     });
-  </script>
+  </script>  
 </body>
 </html>
