@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Button, Container, IconButton, Badge } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import Home from './Home';
 import Educaciones from './Educaciones';
 import Portafolios from './Portafolios';
@@ -8,9 +8,9 @@ import EVNutricional from './EVNutricional';
 import Cart from './Cart';
 import './App.css';
 import barIcon from './baricon.png';
-import FormularioProvider from './FormularioContext'; // Importa el proveedor del contexto
-import { CartProvider, CartContext } from './CartContext'; // Importa el proveedor del carrito y el contexto
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'; // Importa el icono de carrito
+import FormularioProvider from './FormularioContext';
+import { CartProvider } from './CartContext'; // Asegúrate de que la ruta es correcta
+import CartIconButton from './CartIconButton'; // Asegúrate de que la ruta es correcta
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
                 <Button color="inherit" component={Link} to="/educaciones">Educaciones</Button>
                 <Button color="inherit" component={Link} to="/portafolios">Portafolios</Button>
                 <Button color="inherit" component={Link} to="/evnutricional">EVNutricional</Button>
-                <CartIconButton />
+                <CartIconButton /> {/* Aquí se agrega el CartIconButton */}
               </div>
             </Toolbar>
           </AppBar>
@@ -45,18 +45,6 @@ const App = () => {
         </Router>
       </CartProvider>
     </FormularioProvider>
-  );
-};
-
-const CartIconButton = () => {
-  const { cart } = useContext(CartContext);
-
-  return (
-    <IconButton color="inherit" component={Link} to="/cart">
-      <Badge badgeContent={cart.length} color="secondary">
-        <ShoppingCartIcon />
-      </Badge>
-    </IconButton>
   );
 };
 

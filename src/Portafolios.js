@@ -1,4 +1,3 @@
-// Portafolios.js
 import React, { useContext } from 'react';
 import './Home.css'; // Asegúrate de que este archivo CSS esté correctamente configurado
 import Product from './Product'; // Asegúrate de que la ruta es correcta
@@ -21,11 +20,12 @@ const Portafolios = () => {
             {Object.entries(items).map(([id, item]) => (
               <Product
                 key={id}
+                id={id} // Asegúrate de pasar el id si es necesario en el componente Product
                 title={item.title}
                 price={item.price}
                 description={item.description}
                 image={process.env.PUBLIC_URL + '/' + item.image} // Asegúrate de que las imágenes estén accesibles
-                addToCart={() => handleAddToCart(item)}
+                addToCart={() => handleAddToCart({ id, title: item.title, price: item.price, image: item.image })}
               />
             ))}
           </div>

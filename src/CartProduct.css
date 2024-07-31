@@ -1,0 +1,35 @@
+/* CartProduct.css */
+.cart-product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cart-product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  .cart-product-info {
+    flex-grow: 1;
+  }
+  
+  .cart-product-title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .cart-product-price, .cart-product-quantity {
+    margin: 0.5rem 0;
+  }
+  
+  .remove-from-cart-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  

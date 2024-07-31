@@ -1,8 +1,14 @@
-// Product.js
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from './CartContext';
 import './Product.css';
 
-const Product = ({ title, price, description, image, addToCart }) => {
+const Product = ({ id, title, price, description, image }) => {
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    addToCart({ id, title, price, image });
+  };
+
   return (
     <div className="product">
       <img src={image} alt={title} className="product-image" />
@@ -10,7 +16,7 @@ const Product = ({ title, price, description, image, addToCart }) => {
       <div className="product-info">
         <p className="product-description">{description}</p>
         <p className="product-price">Precio: ${price}</p>
-        <button className="add-to-cart-btn" onClick={addToCart}>
+        <button className="add-to-cart-btn" onClick={handleAddToCart}>
           Añadir al Carrito
         </button>
       </div>

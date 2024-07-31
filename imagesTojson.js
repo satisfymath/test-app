@@ -10,31 +10,30 @@ function generateJSONFromImages(categories) {
       const images = fs.readdirSync(folderPath).filter(file => file.endsWith('.png'));
 
       data[category] = images.reduce((acc, image, index) => {
-        // Extrae el nombre del archivo sin la extensión
         const title = path.parse(image).name;
         acc[title] = {
           title: title,
-          price: (index + 1) * 10, // Precio fijo de 10 multiplicado por el índice + 1
+          price: (index + 1) * 10,
           description: `This is the description for ${title}`,
-          image: `${category}/${image}`.replace(/\\/g, '/')
+          image: path.join(category, image).replace(/\\/g, '/')
         };
         return acc;
       }, {});
     } else {
-      console.warn(`Folder not found: ${folderPath}`);
+      console.warn(`Warning: Folder not found: ${folderPath}`);
     }
   });
 
   const jsonOutput = JSON.stringify(data, null, 2);
 
-  fs.writeFileSync(path.join(__dirname, 'output.json'), jsonOutput, 'utf8');
-  console.log('JSON file has been generated successfully!');
+  const outputPath = path.join(__dirname, 'output.json');
+  fs.writeFileSync(outputPath, jsonOutput, 'utf8');
+  console.log('JSON file has been generated successfully at:', outputPath);
 }
 
-// Uso: Lee la lista de categorías desde un archivo JSON
 const configPath = path.join(__dirname, 'categories.json');
 if (!fs.existsSync(configPath)) {
-  console.error('Configuration file not found: categories.json');
+  console.error('Error: Configuration file not found: categories.json');
   process.exit(1);
 }
 
