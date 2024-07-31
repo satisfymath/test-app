@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import Home from './Home';
 import Educaciones from './Educaciones';
@@ -16,7 +16,7 @@ const App = () => {
   return (
     <FormularioProvider>
       <CartProvider>
-        <Router>
+        <Router basename="/test-app">
           <AppBar position="fixed" className="navbar">
             <Toolbar className="toolbar">
               <img src={barIcon} alt="Icono" className="app-icon" />
