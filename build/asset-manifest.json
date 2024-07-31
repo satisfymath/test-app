@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/test-app/static/css/main.4b38117b.css",
-    "main.js": "/test-app/static/js/main.f3d6584d.js",
-    "static/js/453.a5979135.chunk.js": "/test-app/static/js/453.a5979135.chunk.js",
-    "static/media/baricon.png": "/test-app/static/media/baricon.871662a52e0cd4be018b.png",
-    "index.html": "/test-app/index.html",
-    "main.4b38117b.css.map": "/test-app/static/css/main.4b38117b.css.map",
-    "main.f3d6584d.js.map": "/test-app/static/js/main.f3d6584d.js.map",
-    "453.a5979135.chunk.js.map": "/test-app/static/js/453.a5979135.chunk.js.map"
+    "main.css": "/test-app/build/static/css/main.4b38117b.css",
+    "main.js": "/test-app/build/static/js/main.baf66d51.js",
+    "static/js/453.a5979135.chunk.js": "/test-app/build/static/js/453.a5979135.chunk.js",
+    "static/media/baricon.png": "/test-app/build/static/media/baricon.871662a52e0cd4be018b.png",
+    "index.html": "/test-app/build/index.html",
+    "main.4b38117b.css.map": "/test-app/build/static/css/main.4b38117b.css.map",
+    "main.baf66d51.js.map": "/test-app/build/static/js/main.baf66d51.js.map",
+    "453.a5979135.chunk.js.map": "/test-app/build/static/js/453.a5979135.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4b38117b.css",
-    "static/js/main.f3d6584d.js"
+    "static/js/main.baf66d51.js"
   ]
 }
