@@ -208,3 +208,7 @@ h2.ninas {
   align-items: center;
   height: 100vh; /* Ocupa toda la altura de la ventana */
 }
+.nutritrust-icon {
+  width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 50px; /* Mantén la proporción si es necesario */
+}

@@ -4,6 +4,7 @@ import CartProduct from './CartProduct';
 import './Cart.css';
 
 const Cart = () => {
+  // Obtener el contexto del carrito
   const { cart, removeFromCart } = useContext(CartContext);
 
   // Agrupar los productos por id y calcular la cantidad total

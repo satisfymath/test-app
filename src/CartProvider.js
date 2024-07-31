@@ -9,13 +9,8 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     // Cargar el carrito desde localStorage al iniciar
-    try {
-      const storedCart = JSON.parse(localStorage.getItem('cart'));
-      setCart(storedCart || {}); // Maneja el caso null y undefined
-    } catch (error) {
-      console.error('Error loading cart from localStorage', error);
-      setCart({});
-    }
+    const storedCart = JSON.parse(localStorage.getItem('cart')) || {};
+    setCart(storedCart === null ? {} : storedCart); // Maneja el caso null
   }, []);
 
   useEffect(() => {
@@ -38,12 +33,10 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     setCart(prevCart => {
       const newCart = { ...prevCart };
-      if (newCart[id]) {
-        if (newCart[id].quantity > 1) {
-          newCart[id].quantity -= 1;
-        } else {
-          delete newCart[id];
-        }
+      if (newCart[id].quantity > 1) {
+        newCart[id].quantity -= 1;
+      } else {
+        delete newCart[id];
       }
       return newCart;
     });
