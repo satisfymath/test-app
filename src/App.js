@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import Home from './Home';
 import Educaciones from './Educaciones';
@@ -40,6 +40,8 @@ const App = () => {
               <Route path="/portafolios" component={Portafolios} />
               <Route path="/evnutricional" component={EVNutricional} />
               <Route path="/cart" component={Cart} />
+              {/* Redirige cualquier ruta no definida a la página de inicio */}
+              <Redirect to="/" />
             </Switch>
           </Container>
         </Router>
@@ -49,4 +51,3 @@ const App = () => {
 };
 
 export default App;
-
