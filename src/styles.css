@@ -44,6 +44,7 @@ html, body {
 
 /* Estilos para el logo */
 .logo {
+    margin-top: 20px; /* Espacio debajo del logo */
     max-width: 150px; /* Ajusta el tamaño del logo según sea necesario */
     margin-bottom: 20px; /* Espacio debajo del logo */
 }
