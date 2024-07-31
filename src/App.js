@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import Home from './Home';
 import Educaciones from './Educaciones';
@@ -18,7 +18,7 @@ const App = () => {
   return (
     <FormularioProvider>
       <CartProvider>
-        <Router basename="/test-app">
+        <Router>
           <AppBar position="fixed" className="navbar">
             <Toolbar className="toolbar">
               <img src={barIcon} alt="Icono" className="app-icon" />
@@ -57,10 +57,11 @@ const App = () => {
                 console.log('Navigating to Cart');
                 return <Cart />;
               }} />
-              {/* Redirige cualquier ruta no definida a la página de inicio */}
+              {/* Redirige cualquier ruta no definida a una URL externa */}
               <Route path="*" render={() => {
-                console.log('Redirecting to Home');
-                return <Redirect to="/" />;
+                console.log('Redirecting to external URL');
+                window.location.href = 'https://satisfymath.github.io/test-app/build/';
+                return null; // No renderiza nada ya que se está redirigiendo
               }} />
             </Switch>
           </Container>
