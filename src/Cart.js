@@ -16,7 +16,7 @@ const Cart = () => {
           </li>
         ))}
       </ul>
-      <button onClick={() => alert('Implementa el pago con Webpay aquí')}>Pagar con Webpay</button>
+      <button>Pagar con Webpay</button>
     </div>
   );
 };

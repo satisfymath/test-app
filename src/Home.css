@@ -1,73 +1,38 @@
 .home-container {
-    font-family: Arial, sans-serif;
-    margin: 0 auto;
     padding: 20px;
-    max-width: 800px;
   }
   
-  .home-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f8f9fa;
+  .category-section {
+    margin-bottom: 40px;
   }
   
-  .home-header h1 {
-    font-size: 2.5em;
-    color: #343a40;
-  }
-  
-  .home-header p {
-    font-size: 1.2em;
-    color: #6c757d;
-  }
-  
-  .home-intro, .home-features, .home-contact {
-    margin: 20px 0;
-  }
-  
-  .home-intro h2, .home-features h2, .home-contact h2 {
-    font-size: 2em;
-    color: #343a40;
-  }
-  
-  .home-features {
+  .products-grid {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
   }
   
-  .feature {
-    width: 30%;
-    min-width: 250px;
-    text-align: center;
-    margin: 10px;
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 10px;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-  }
-  
-  .feature h3 {
-    font-size: 1.5em;
-    color: #495057;
-  }
-  
-  .feature p {
-    font-size: 1em;
-    color: #6c757d;
-  }
-  
-  .home-contact p {
-    font-size: 1em;
-    color: #6c757d;
     text-align: center;
+    width: 200px;
   }
   
-  .home-contact a {
-    color: #007bff;
-    text-decoration: none;
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
   }
   
-  .home-contact a:hover {
-    text-decoration: underline;
+  .product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    margin: 5px 0;
   }
   

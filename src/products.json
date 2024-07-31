@@ -1,0 +1,212 @@
+{
+  "resumenes": {
+    "Alimentos": {
+      "title": "Alimentos",
+      "price": 10,
+      "description": "This is the description for Alimentos",
+      "image": "resumenes/Alimentos.png"
+    },
+    "Asistencia nutricional intensiva": {
+      "title": "Asistencia nutricional intensiva",
+      "price": 20,
+      "description": "This is the description for Asistencia nutricional intensiva",
+      "image": "resumenes/Asistencia nutricional intensiva.png"
+    },
+    "Cirugia Bariatrica": {
+      "title": "Cirugia Bariatrica",
+      "price": 30,
+      "description": "This is the description for Cirugia Bariatrica",
+      "image": "resumenes/Cirugia Bariatrica.png"
+    },
+    "Dietetica Adulto Sano": {
+      "title": "Dietetica Adulto Sano",
+      "price": 40,
+      "description": "This is the description for Dietetica Adulto Sano",
+      "image": "resumenes/Dietetica Adulto Sano.png"
+    },
+    "Dietoterapia en estres metabolico": {
+      "title": "Dietoterapia en estres metabolico",
+      "price": 50,
+      "description": "This is the description for Dietoterapia en estres metabolico",
+      "image": "resumenes/Dietoterapia en estres metabolico.png"
+    },
+    "Dietoterapia enfermedades cardiovasculares": {
+      "title": "Dietoterapia enfermedades cardiovasculares",
+      "price": 60,
+      "description": "This is the description for Dietoterapia enfermedades cardiovasculares",
+      "image": "resumenes/Dietoterapia enfermedades cardiovasculares.png"
+    },
+    "Dietoterapia por Deficit y Exeso": {
+      "title": "Dietoterapia por Deficit y Exeso",
+      "price": 70,
+      "description": "This is the description for Dietoterapia por Deficit y Exeso",
+      "image": "resumenes/Dietoterapia por Deficit y Exeso.png"
+    },
+    "Dietoterapia Renal": {
+      "title": "Dietoterapia Renal",
+      "price": 80,
+      "description": "This is the description for Dietoterapia Renal",
+      "image": "resumenes/Dietoterapia Renal.png"
+    },
+    "Dietoterapiaenfermedades neurologicas": {
+      "title": "Dietoterapiaenfermedades neurologicas",
+      "price": 90,
+      "description": "This is the description for Dietoterapiaenfermedades neurologicas",
+      "image": "resumenes/Dietoterapiaenfermedades neurologicas.png"
+    },
+    "Evaluacion del estado nutricional": {
+      "title": "Evaluacion del estado nutricional",
+      "price": 100,
+      "description": "This is the description for Evaluacion del estado nutricional",
+      "image": "resumenes/Evaluacion del estado nutricional.png"
+    },
+    "Fidioterapia": {
+      "title": "Fidioterapia",
+      "price": 110,
+      "description": "This is the description for Fidioterapia",
+      "image": "resumenes/Fidioterapia.png"
+    },
+    "Hipertension": {
+      "title": "Hipertension",
+      "price": 120,
+      "description": "This is the description for Hipertension",
+      "image": "resumenes/Hipertension.png"
+    },
+    "Interaccion farmaco nutriente": {
+      "title": "Interaccion farmaco nutriente",
+      "price": 130,
+      "description": "This is the description for Interaccion farmaco nutriente",
+      "image": "resumenes/Interaccion farmaco nutriente.png"
+    },
+    "Microbiologia bacterias": {
+      "title": "Microbiologia bacterias",
+      "price": 140,
+      "description": "This is the description for Microbiologia bacterias",
+      "image": "resumenes/Microbiologia bacterias.png"
+    },
+    "Microbiologia Parasitos": {
+      "title": "Microbiologia Parasitos",
+      "price": 150,
+      "description": "This is the description for Microbiologia Parasitos",
+      "image": "resumenes/Microbiologia Parasitos.png"
+    },
+    "Microbiologia Virus": {
+      "title": "Microbiologia Virus",
+      "price": 160,
+      "description": "This is the description for Microbiologia Virus",
+      "image": "resumenes/Microbiologia Virus.png"
+    },
+    "Vitaminas": {
+      "title": "Vitaminas",
+      "price": 170,
+      "description": "This is the description for Vitaminas",
+      "image": "resumenes/Vitaminas.png"
+    }
+  },
+  "apuntes": {
+    "Diabetes Mellitos apuntes": {
+      "title": "Diabetes Mellitos apuntes",
+      "price": 10,
+      "description": "This is the description for Diabetes Mellitos apuntes",
+      "image": "apuntes/Diabetes Mellitos apuntes.png"
+    },
+    "Dislipidemia": {
+      "title": "Dislipidemia",
+      "price": 20,
+      "description": "This is the description for Dislipidemia",
+      "image": "apuntes/Dislipidemia.png"
+    },
+    "Nutricion basica": {
+      "title": "Nutricion basica",
+      "price": 30,
+      "description": "This is the description for Nutricion basica",
+      "image": "apuntes/Nutricion basica.png"
+    },
+    "Resistencia a la insulina": {
+      "title": "Resistencia a la insulina",
+      "price": 40,
+      "description": "This is the description for Resistencia a la insulina",
+      "image": "apuntes/Resistencia a la insulina.png"
+    }
+  },
+  "portafolios": {
+    "Alimentacion complementaria": {
+      "title": "Alimentacion complementaria",
+      "price": 10,
+      "description": "This is the description for Alimentacion complementaria",
+      "image": "portafolios/Alimentacion complementaria.png"
+    },
+    "Dietoterapia adulto y adulto mayor II": {
+      "title": "Dietoterapia adulto y adulto mayor II",
+      "price": 20,
+      "description": "This is the description for Dietoterapia adulto y adulto mayor II",
+      "image": "portafolios/Dietoterapia adulto y adulto mayor II.png"
+    },
+    "Dietoterapia aulto y adulto mayor I": {
+      "title": "Dietoterapia aulto y adulto mayor I",
+      "price": 30,
+      "description": "This is the description for Dietoterapia aulto y adulto mayor I",
+      "image": "portafolios/Dietoterapia aulto y adulto mayor I.png"
+    },
+    "Dietoterapia en pediatria I": {
+      "title": "Dietoterapia en pediatria I",
+      "price": 40,
+      "description": "This is the description for Dietoterapia en pediatria I",
+      "image": "portafolios/Dietoterapia en pediatria I.png"
+    },
+    "Dietoterapia en pediatria II": {
+      "title": "Dietoterapia en pediatria II",
+      "price": 50,
+      "description": "This is the description for Dietoterapia en pediatria II",
+      "image": "portafolios/Dietoterapia en pediatria II.png"
+    },
+    "Enfermedades cronicas no transmisibles": {
+      "title": "Enfermedades cronicas no transmisibles",
+      "price": 60,
+      "description": "This is the description for Enfermedades cronicas no transmisibles",
+      "image": "portafolios/Enfermedades cronicas no transmisibles.png"
+    },
+    "Evaluacion nutricional materno infantil": {
+      "title": "Evaluacion nutricional materno infantil",
+      "price": 70,
+      "description": "This is the description for Evaluacion nutricional materno infantil",
+      "image": "portafolios/Evaluacion nutricional materno infantil.png"
+    },
+    "Internado Clinico": {
+      "title": "Internado Clinico",
+      "price": 80,
+      "description": "This is the description for Internado Clinico",
+      "image": "portafolios/Internado Clinico.png"
+    },
+    "Mediciones Antropometricas": {
+      "title": "Mediciones Antropometricas",
+      "price": 90,
+      "description": "This is the description for Mediciones Antropometricas",
+      "image": "portafolios/Mediciones Antropometricas.png"
+    },
+    "Nutricion y porciones": {
+      "title": "Nutricion y porciones",
+      "price": 100,
+      "description": "This is the description for Nutricion y porciones",
+      "image": "portafolios/Nutricion y porciones.png"
+    },
+    "soporte Nutricional": {
+      "title": "soporte Nutricional",
+      "price": 110,
+      "description": "This is the description for soporte Nutricional",
+      "image": "portafolios/soporte Nutricional.png"
+    },
+    "Soporte utricional y formulas lactias pediatria": {
+      "title": "Soporte utricional y formulas lactias pediatria",
+      "price": 120,
+      "description": "This is the description for Soporte utricional y formulas lactias pediatria",
+      "image": "portafolios/Soporte utricional y formulas lactias pediatria.png"
+    },
+    "Tablas adulto y adulto mayor": {
+      "title": "Tablas adulto y adulto mayor",
+      "price": 130,
+      "description": "This is the description for Tablas adulto y adulto mayor",
+      "image": "portafolios/Tablas adulto y adulto mayor.png"
+    }
+  }
+}

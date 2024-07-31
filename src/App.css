@@ -157,20 +157,6 @@ h2.ninas {
   color: #ff7300;
 }
 
-/* Estilos para botones */
-button {
-  background-color: #dfb543dd;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #bd6035fc;
-}
-
 .navbar a {
   color: #fcfcfc;
   text-decoration: none;
