@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
-// import './Product.css';
-// import './Home.css'; // Asegúrate de que este archivo CSS esté correctamente configurado
 import './styles.css'
 
 const Product = ({ id, title, price, description, image }) => {
@@ -16,7 +14,7 @@ const Product = ({ id, title, price, description, image }) => {
       <img src={image} alt={title} className="product-image" />
       <h2 className="product-title">{title}</h2>
       <div className="product-info">
-        <p className="product-description">{description}</p>
+        {/* <p className="product-description">{description}</p> */}
         <p className="product-price">Precio: ${price}</p>
         <button className="add-to-cart-btn" onClick={handleAddToCart}>
           Añadir al Carrito

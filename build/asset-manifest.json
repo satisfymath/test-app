@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/test-app/build/static/css/main.3df2dc23.css",
-    "main.js": "/test-app/build/static/js/main.2fcf4e08.js",
+    "main.css": "/test-app/build/static/css/main.468629da.css",
+    "main.js": "/test-app/build/static/js/main.098714b1.js",
     "static/media/baricon.png": "/test-app/build/static/media/baricon.871662a52e0cd4be018b.png",
     "static/media/nutritrustlogo.png": "/test-app/build/static/media/nutritrustlogo.e62523493525d4637342.png",
     "static/media/nutritrusticon.png": "/test-app/build/static/media/nutritrusticon.d623d56560ecc608668f.png",
     "index.html": "/test-app/build/index.html",
-    "main.3df2dc23.css.map": "/test-app/build/static/css/main.3df2dc23.css.map",
-    "main.2fcf4e08.js.map": "/test-app/build/static/js/main.2fcf4e08.js.map"
+    "main.468629da.css.map": "/test-app/build/static/css/main.468629da.css.map",
+    "main.098714b1.js.map": "/test-app/build/static/js/main.098714b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.3df2dc23.css",
-    "static/js/main.2fcf4e08.js"
+    "static/css/main.468629da.css",
+    "static/js/main.098714b1.js"
   ]
 }

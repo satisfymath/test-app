@@ -290,40 +290,6 @@ font-family: "Playwrite AR", cursive;
   height: 50px;
 }
 
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-  .app-title {
-    font-size: 20px;
-  }
-
-  .nav-buttons {
-    border: none; /* Eliminar bordes si no quieres bordes visibles */
-    margin: 0; /* Asegúrate de que no haya margen alrededor del botón */
-    display: inline-block; /* Asegúrate de que el botón no ocupe más espacio del necesario */
-    text-align: center; /* Alinea el texto al centro del botón */
-    color: #fff; /* Color del texto, si es necesario */
-    font-size: 16px; /* Tamaño de la fuente del texto */
-    border-radius: 4px; /* Opcional: Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  }
-
-  .app-icon, .nutritrust-icon {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .app-title {
-    font-size: 18px;
-  }
-  
-  .app-icon, .nutritrust-icon {
-    width: 40px;
-    height: 40px;
-  }
-}
-
 /* Contenedor principal del carrito */
 .cart-container {
   padding: 2% 4%; /* Padding en porcentajes */
@@ -515,18 +481,49 @@ font-family: "Playwrite AR", cursive;
   margin-bottom: 10px;
 }
 
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-  .formev {
-    padding: 15px;
-    max-width: 100%;
+  .app-title {
+    font-size: 20px;
   }
 
-  .formev input,
-  .formev select {
-    font-size: 0.875rem;
+  .nav-buttons {
+    border: none; /* Eliminar bordes si no quieres bordes visibles */
+    margin: 0; /* Asegúrate de que no haya margen alrededor del botón */
+    display: inline-block; /* Asegúrate de que el botón no ocupe más espacio del necesario */
+    text-align: center; /* Alinea el texto al centro del botón */
+    color: #fff; /* Color del texto, si es necesario */
+    font-size: 16px; /* Tamaño de la fuente del texto */
+    border-radius: 4px; /* Opcional: Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   }
 
-  .formev button {
-    font-size: 0.875rem;
+  .app-icon, .nutritrust-icon {
+    width: 50px;
+    height: 50px;
   }
+
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 18px;
+  }
+  
+  .app-icon, .nutritrust-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Estilos para dispositivos móviles medianos */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .product {flex: 1 1 calc(50% - 16px); /* Ocupa el 50% del contenedor menos el espacio del gap */
+    
+};
+  /* Escala de uno para el body */
+  body {
+    transform: scale(1)
+  }
+
 }
