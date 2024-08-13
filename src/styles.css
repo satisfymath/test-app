@@ -503,27 +503,31 @@ font-family: "Playwrite AR", cursive;
     height: 50px;
   }
 
-}
-
-@media (max-width: 480px) {
-  .app-title {
-    font-size: 18px;
-  }
-  
-  .app-icon, .nutritrust-icon {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* Estilos para dispositivos móviles medianos */
-@media screen and (min-width: 481px) and (max-width: 767px) {
   .product {flex: 1 1 calc(50% - 16px); /* Ocupa el 50% del contenedor menos el espacio del gap */
     
-};
+  };
   /* Escala de uno para el body */
   body {
     transform: scale(1)
   }
 
+}
+
+/* Estilos para dispositivos con orientación vertical (más altos que anchos) */
+@media screen and (orientation: portrait) {
+  body {
+    transform: scale(1); /* Ajustar zoom para pantallas verticales */
+    transform-origin: 0 0;
+  }
+
+  .product {
+    flex: 1 1 calc(50% - 16px); /* Ocupa el 50% del contenedor menos el espacio del gap */
+    width: 50vw; /* Ajustar el ancho de los productos al 45% del ancho de la vista */
+    margin: 0 auto; /* Centrar el producto en su contenedor */
+    padding: 13px;
+  }
+  /* Contenedor principal del carrito */
+  .cart-container {
+    top: 10%;
+  }
 }

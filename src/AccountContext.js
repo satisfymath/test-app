@@ -1,19 +1,14 @@
-// AcountContext.js
-import React, { createContext, useState, useEffect } from 'react';
+// AccountContext.js
+import React, { createContext, useState, useContext } from 'react';
 
-// Crear el contexto
-export const AccountContext = createContext();
+const AccountContext = createContext();
 
-// Proveedor del contexto
 export const AccountProvider = ({ children }) => {
   const [account, setAccount] = useState(() => {
-    const savedAccount = localStorage.getItem('AccountProvider');
-    return savedAccount ? JSON.parse(savedAccount) : null;
+    // Obtener la información del usuario desde localStorage si existe
+    const storedUser = localStorage.getItem('user');
+    return storedUser ? JSON.parse(storedUser) : null;
   });
-
-  useEffect(() => {
-    localStorage.setItem('AccountProvider', JSON.stringify(account));
-  }, [account]);
 
   return (
     <AccountContext.Provider value={{ account, setAccount }}>
@@ -21,3 +16,5 @@ export const AccountProvider = ({ children }) => {
     </AccountContext.Provider>
   );
 };
+
+export const useAccount = () => useContext(AccountContext);
